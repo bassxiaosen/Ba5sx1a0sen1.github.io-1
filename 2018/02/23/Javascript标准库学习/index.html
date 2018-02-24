@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Array123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Function,Object都与Array类似">
+<meta name="description" content="Array1.  Array的构造函数     123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Functi">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javasctipt标准库学习">
 <meta property="og:url" content="http://yoursite.com/2018/02/23/Javascript标准库学习/index.html">
 <meta property="og:site_name" content="Bass小森的博客">
-<meta property="og:description" content="Array123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Function,Object都与Array类似">
+<meta property="og:description" content="Array1.  Array的构造函数     123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Functi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-23T06:16:30.000Z">
+<meta property="og:updated_time" content="2018-02-24T20:06:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javasctipt标准库学习">
-<meta name="twitter:description" content="Array123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Function,Object都与Array类似">
+<meta name="twitter:description" content="Array1.  Array的构造函数     123456var a = Array(3) // a = [,,]var a = Array(3,3) // a = [3,3]体现了API的不一致性在Array前加new与不加new都一样,因为Array属于复杂数据类型,所以加new与不加都一样效果,而基本数据类型Number,String,Boolean,加不加new就不一致所以,Functi">
 
 
 
@@ -320,7 +320,13 @@
       
 
       
-        <h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>) <span class="comment">// a = [,,]</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>,<span class="number">3</span>) <span class="comment">// a = [3,3]</span></span><br><span class="line">体现了API的不一致性</span><br><span class="line">在<span class="built_in">Array</span>前加<span class="keyword">new</span>与不加<span class="keyword">new</span>都一样,因为<span class="built_in">Array</span>属于复杂数据类型,所以加<span class="keyword">new</span>与不加都一样效果,</span><br><span class="line">而基本数据类型<span class="built_in">Number</span>,<span class="built_in">String</span>,<span class="built_in">Boolean</span>,加不加<span class="keyword">new</span>就不一致</span><br><span class="line">所以,<span class="built_in">Function</span>,<span class="built_in">Object</span>都与<span class="built_in">Array</span>类似</span><br></pre></td></tr></table></figure>
+        <h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><pre><code>1.  Array的构造函数
+    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>) <span class="comment">// a = [,,]</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>,<span class="number">3</span>) <span class="comment">// a = [3,3]</span></span><br><span class="line">体现了API的不一致性</span><br><span class="line">在<span class="built_in">Array</span>前加<span class="keyword">new</span>与不加<span class="keyword">new</span>都一样,因为<span class="built_in">Array</span>属于复杂数据类型,所以加<span class="keyword">new</span>与不加都一样效果,</span><br><span class="line">而基本数据类型<span class="built_in">Number</span>,<span class="built_in">String</span>,<span class="built_in">Boolean</span>,加不加<span class="keyword">new</span>就不一致</span><br><span class="line">所以,<span class="built_in">Function</span>,<span class="built_in">Object</span>都与<span class="built_in">Array</span>类似</span><br></pre></td></tr></table></figure>
+
+2. 数组的实例方法上,会改变数组本身的有`pop()`,`push()`,`shift()`,`unfshift()`,`reverse()`,
+   `splice()`,`sort()`
+   不改变原来数组的有`join()`,`concat()`,`slice()`,`map()`,`forEach()`,`filter()`,`some()`,
+   `every()`,`reduce() reduceRight()`,`indexOf()`,`lastIndexOf()`
 </code></pre>
       
     </div>
