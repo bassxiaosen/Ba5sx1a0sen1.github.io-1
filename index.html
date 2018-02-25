@@ -333,6 +333,64 @@
 <h3 id="innerText-textContent的区别看这篇文章"><a href="#innerText-textContent的区别看这篇文章" class="headerlink" title="innerText,textContent的区别看这篇文章"></a>innerText,textContent的区别看这篇文章</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent</a></p>
 <h3 id="Node接口提供的方法"><a href="#Node接口提供的方法" class="headerlink" title="Node接口提供的方法"></a>Node接口提供的方法</h3><p><code>appendChild()</code>,参数为节点,可以是ElementNode和TextNode<br><code>cloneChild()</code>,接收一个参数<code>true</code>或者<code>false</code>,进行深拷贝还是浅拷贝,在最新标准中是缺省默认值是<code>false</code><br><code>contains()</code>,接收一个节点做参数,判断是否被包含,返回<code>true</code>或<code>false</code><br><code>hasChildNodes()</code>,判断是否有子节点,返回<code>true</code>或者<code>false</code><br><code>insertBefore()</code>,插入节点,接收两个参数,一个是新插入节点,一个是用于相对插入当前节点的后一个节点<br><code>isEqualNode()</code>,<code>isSameNode()</code><br><code>removeChild()</code>,接收一个节点参数,用于删除子节点<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先定位父节点,然后删除其子节点</span></span><br><span class="line"><span class="keyword">var</span> d = <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>);</span><br><span class="line"><span class="keyword">var</span> d_nested = <span class="built_in">document</span>.getElementById(<span class="string">"nested"</span>);</span><br><span class="line"><span class="keyword">var</span> throwawayNode = d.removeChild(d_nested);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无须定位父节点,通过parentNode属性直接删除自身</span></span><br><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">"nested"</span>);</span><br><span class="line">    <span class="keyword">if</span> (node.parentNode) &#123;</span><br><span class="line">    node.parentNode.removeChild(node);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除一个元素节点的所有子节点</span></span><br><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>);</span><br><span class="line">    <span class="keyword">while</span> (element.firstChild) &#123;</span><br><span class="line">    element.removeChild(element.firstChild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><code>replaceChild()</code>,接收两个参数,用于替换子节点</p>
+<h3 id="Document提供的部分接口"><a href="#Document提供的部分接口" class="headerlink" title="Document提供的部分接口"></a>Document提供的部分接口</h3><p>以下是个人认为应用场景多的,需要牢记的,还需记住那些属性是只读的,是可改的,那些API是访问器还是修改器<br>完整的请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document</a></p>
+<ol>
+<li>属性:<ol>
+<li><code>document.documentElement</code> 对于HTML 文档来说，返回的一般是 HTML 元素。</li>
+<li><code>document.anchor</code> 返回当前 document 的所有的锚点的列表<blockquote>
+<p>由于向后兼容的原因,该属性只返回那些拥有name属性的a元素,而不是那些拥有id属性的a元素.</p>
+</blockquote>
+</li>
+<li><code>Document.body</code> 返回当前文档的 <code>&lt;body&gt;</code> 元素.</li>
+<li><code>Document.cookie</code> 返回文档的由分号分隔的cookie列表，或者设置一个单独的cookie值.<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></li>
+<li><code>Document.forms</code> 返回当前文档中的<code>&lt;form&gt;</code>元素列表,是一个集合</li>
+<li><code>Document.head</code>   返回当前文档的<code>&lt;head&gt;</code>元素</li>
+<li><code>Document.images</code> 返回当前文档的图像列表,也是集合,伪数组</li>
+<li><code>Document.links</code> 返回文档中所有超链接的列表</li>
+<li><code>Document.location</code> 返回当前文档的URI</li>
+<li><code>Document.title</code> 设置或获取当前文档的标题</li>
+<li><code>Document.URL</code> 返回文档的地址字符串</li>
+<li><code>Document.characterSet</code> 返回文档使用的字符集。</li>
+<li><code>ParentNode.childElementCount</code> 返回一个无符号长整型，给出对象含有的后代数量</li>
+<li><code>Document.doctype</code> 返回当前文档的 Document Type Definition (DTD)。</li>
+<li><code>Document.domain</code> 获取/设置当前文档的原始域部分, 用于同源策略.</li>
+<li><code>Document.referrer</code> 返回着链接到当前页面的那个页面的 URL</li>
+<li><code>Document.scripts</code> 返回文档中所有的<code>&lt;script&gt;</code>元素</li>
+<li><code>Document.scrollingElement</code> 返回滚动 document 的 Element 的一个引用。 </li>
+<li><code>Document.styleSheets</code> 返回当前 document 的样式表对象的列表。</li>
+</ol>
+</li>
+<li>方法:<ol>
+<li><code>Document.close()</code> 关闭文档写入流.</li>
+<li><code>Document.open()</code> 打开文档写入流.</li>
+<li><code>document.write()</code> 将一个文本字符串写入由 document.open() 打开的一个文档流。<blockquote>
+<p>注意: 因为 document.write 写入文档流，在关闭(已加载)的文档上调用 document.write 会自动调用              document.open，这将清除该文档。</p>
+</blockquote>
+</li>
+<li><code>document.writeln()</code> 向文档中写入一串文本，并紧跟着一个换行符。</li>
+<li>创建相关API:<ol>
+<li><code>Document.createDocumentFragment()</code> 创建一个新的文档片段</li>
+<li><code>Document.createElement()</code> 用给定的标签名创建一个新的元素</li>
+<li><code>Document.createComment()</code> 创建一个新的注释节点并返回它</li>
+<li><code>Document.createTextNode()</code> 创建一个文字节点<ol>
+<li>查询获取类相关API:</li>
+</ol>
+</li>
+<li><code>getElementById()</code></li>
+<li><code>getElementsByClassName()</code></li>
+<li><code>getElementsByName()</code></li>
+<li><code>getElementsByTagName()</code></li>
+<li><code>getSelection()</code> 返回文档中与选中文本相关的Selection对象.</li>
+<li><code>querySelector()</code></li>
+<li><code>querySelectorAll()</code><ol>
+<li><code>Document.hasFocus()</code> 如果焦点在当前指定的文档的内部,返回 true .</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 
           
         
@@ -728,7 +786,7 @@
 </li>
 <li><p><code>delete</code>用来删除对象的属性,无法删除继承而来的属性</p>
 </li>
-<li><code>Object.keys()</code>方法用于查看对象本身的所有属性</li>
+<li><code>Object.keys()</code>方法用于查看对象本身的所有属性(<code>key-value</code>)</li>
 <li><code>in</code>用于判断对象是否具备某一属性,<code>for...in</code>用于遍历一个对象的全部属性(包括继承属性)</li>
 <li>五个<code>falsy</code>: <code>&#39;&#39;</code>,<code>Nan</code>,<code>undefined</code>,<code>null</code>,<code>0</code></li>
 </ol>
