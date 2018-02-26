@@ -87,10 +87,18 @@
 <meta property="og:site_name" content="Bass小森的博客">
 <meta property="og:description" content="DOM是啥玩意?DOM全称叫做Document Object Model,老是听人说dom树dom树到底是什么?document和object之间的映射关系就是model,形成了一棵树 DOM的元素对象看以下代码12345678&amp;lt;!Doctype html&amp;gt;&amp;lt;html lang=&apos;zh-Hans&apos;&amp;gt;    &amp;lt;head&amp;gt;    &amp;lt;/head&amp;gt;    &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-25T21:00:04.000Z">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/842/=ScrollTop.png">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/15087/rect.png">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/186/=Dimensions-offset.png">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png">
+<meta property="og:image" content="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png">
+<meta property="og:updated_time" content="2018-02-26T17:48:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之变态API-DOM">
 <meta name="twitter:description" content="DOM是啥玩意?DOM全称叫做Document Object Model,老是听人说dom树dom树到底是什么?document和object之间的映射关系就是model,形成了一棵树 DOM的元素对象看以下代码12345678&amp;lt;!Doctype html&amp;gt;&amp;lt;html lang=&apos;zh-Hans&apos;&amp;gt;    &amp;lt;head&amp;gt;    &amp;lt;/head&amp;gt;    &amp;">
+<meta name="twitter:image" content="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png">
 
 
 
@@ -386,6 +394,65 @@
 </ol>
 </li>
 </ol>
+<h3 id="Element提供的接口"><a href="#Element提供的接口" class="headerlink" title="Element提供的接口"></a>Element提供的接口</h3><ol>
+<li>属性:<ul>
+<li><code>Element.attributes</code> 返回一个与该元素相关的所有属性集合</li>
+<li><code>Element.classList</code> 返回该元素包含的class属性 具备<code>add()</code>,<code>remove()</code>,<code>item()</code>,<code>toggle()</code>,<code>contain()</code>方法</li>
+<li><code>Element.className</code> 表示当前元素的class属性的值,可以是由空格分隔的多个class属性值. </li>
+<li><code>Element.clientHeight</code> 返回Number 表示内部相对于外层元素的高度<br>  <img src="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png" alt="clientHeight"></li>
+<li><code>Element.clientWidth</code> 返回Number 表示该元素它内部的宽度.</li>
+<li><code>Element.clientLeft</code> 返回Number表示该元素距离它左边界的宽度.</li>
+<li><code>Element.clientTop</code> 返回 Number 表示该元素距离它上边界的高度</li>
+<li><code>Element.id</code> 返回这个元素的id字符串.</li>
+<li><code>Element.innerHTML</code> 是一个DOMString 表示这个元素的内容文本</li>
+<li><code>Element.scrollHeight</code>  这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值clientHeight相同。包括元素的padding，但不包括元素的border和margin。scrollHeight也包括 ::before 和 ::after这样的伪元素。<br>  <img src="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png" alt="scrollHeight"></li>
+<li><code>Element.scrollLeft</code> 可以读取或设置元素滚动条到元素左边的距离。</li>
+<li><code>Element.scrollTop</code> 可以获取或设置一个元素的内容垂直滚动的像素数。即滚动了多少的像素数<br>  <img src="https://developer.mozilla.org/@api/deki/files/842/=ScrollTop.png" alt="scrollTop"></li>
+<li><code>Element.scrollWidth</code> 返回类型为： Number ，表示该滚动窗口的宽度 若元素的宽度大于其内容的区域（例如，元素存在滚动条时）, scrollWidth的值要大于clientWidth</li>
+<li><code>Element.TagName</code> 返回类型为：String，表示该元素的标签名,除了<code>&lt;svg&gt;</code>其余都以大写形式返回</li>
+</ul>
+</li>
+<li><p>方法:</p>
+<ul>
+<li>继承自<code>EventTarget</code>的方法<br>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget</a><ol>
+<li><code>EventTarget.addEventListener()</code> 在EventTarget上注册特定事件类型的事件处理程序。</li>
+<li><code>EventTarget.removeEventListener()</code> EventTarget中删除事件侦听器。</li>
+<li><code>EventTarget.dispatchEvent()</code> 将事件分派到此EventTarget。</li>
+</ol>
+</li>
+<li><code>Element.getAttribute()</code> 返回元素上一个指定的属性值。如果指定的属性不存在，则返回  null 或 “” （空字符串）<blockquote>
+<p>let attribute = element.getAttribute(attributeName);</p>
+</blockquote>
+</li>
+<li><code>Element.getBoundingClientRect()</code> 返回元素的大小及其相对于视口的位置,返回一个<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMClientRect" target="_blank" rel="noopener">DOMRect</a>对象,DOMRect 对象包含了一组用于描述边框的只读属性——left、top、right和bottom，单位为像素。除了 width 和 height 外的属性都是相对于视口的左上角位置而言的。<br>  <img src="https://mdn.mozillademos.org/files/15087/rect.png" alt="DomRect"></li>
+<li><code>Element.getElementsByClassName()</code> </li>
+<li><code>Element.getElementsByTagName()</code></li>
+<li><code>Element.hasAttribute()</code> <code>var result = element.hasAttribute(attName);</code>  返回一个布尔值，指示该元素是否包含有指定的属性（attribute）</li>
+<li><code>Element.querySelector()</code></li>
+<li><code>Element.querySelectorAll()</code> 返回一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList" target="_blank" rel="noopener">NodeList</a></li>
+<li><p><code>ChildNode.remove()</code> 把一个节点从它所属的DOM树中删除<br>  语法:</p>
+<blockquote>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">elementNodeReference.remove();</span><br></pre></td></tr></table></figure>
+</code></pre></blockquote>
+</li>
+<li><p><code>element.removeAttribute()</code>  从指定的元素中删除一个属性。</p>
+</li>
+<li><code>Element.removeAttributeNode()</code> removeAttributeNode 从当前的 element(元素节点) 删除指定的属性</li>
+<li><code>Element.setAttribute()</code> 设置指定元素上的一个属性值。如果属性已经存在，则更新该值; 否则将添加一个新的属性用指定的名称和值.要获取属性的当前值，使用 getAttribute(); 要删除一个属性，调用removeAttribute()。<blockquote>
+<p>element.setAttribute(name, value);</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="简单的看一下HTMLElement"><a href="#简单的看一下HTMLElement" class="headerlink" title="简单的看一下HTMLElement"></a>简单的看一下HTMLElement</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement</a></p>
+<ol>
+<li><code>HTMLElement.offsetHeight</code> 返回该元素的像素高度，高度包含该元素的垂直内边距和边框，且是一个整数。</li>
+<li><code>HTMLElement.offsetWidth</code> 返回一个元素的布局宽度。一个典型的offsetWidth是测量包含元素的边框(border)、水平线上的内边距(padding)、竖直方向滚动条(scrollbar)（如果存在的话）、以及CSS设置的宽度(width)的值。<br> <img src="https://developer.mozilla.org/@api/deki/files/186/=Dimensions-offset.png" alt="offset"><br> <img src="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png" alt="client"><br> <img src="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png" alt="scroll"></li>
+<li><code>HTMLElement.offsetParent</code> 元素的父元素，如果没有就是body元素</li>
+<li><code>HTMLElement.offsetLeft</code> 返回当前元素左上角相对于<code>HTMLElement.offsetParent</code>节点的左边界偏移的像素值</li>
+<li><code>HTMLElement.offsetTop</code> <code>HTMLElement.offsetTop</code>为只读属性，它返回当前元素相对于其<code>offsetParent</code>元素的顶部的距离。</li>
+</ol>
 
       
     </div>
@@ -560,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM是啥玩意"><span class="nav-number">1.</span> <span class="nav-text">DOM是啥玩意?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的元素对象"><span class="nav-number">2.</span> <span class="nav-text">DOM的元素对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的child相关API"><span class="nav-number">3.</span> <span class="nav-text">DOM的child相关API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的sibling相关API"><span class="nav-number">4.</span> <span class="nav-text">DOM的sibling相关API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeType-nodeValue-nodeName"><span class="nav-number">5.</span> <span class="nav-text">nodeType,nodeValue,nodeName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#parentNode-parentElement"><span class="nav-number">6.</span> <span class="nav-text">parentNode,parentElement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#innerText-textContent的区别看这篇文章"><span class="nav-number">7.</span> <span class="nav-text">innerText,textContent的区别看这篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node接口提供的方法"><span class="nav-number">8.</span> <span class="nav-text">Node接口提供的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Document提供的部分接口"><span class="nav-number">9.</span> <span class="nav-text">Document提供的部分接口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM是啥玩意"><span class="nav-number">1.</span> <span class="nav-text">DOM是啥玩意?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的元素对象"><span class="nav-number">2.</span> <span class="nav-text">DOM的元素对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的child相关API"><span class="nav-number">3.</span> <span class="nav-text">DOM的child相关API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的sibling相关API"><span class="nav-number">4.</span> <span class="nav-text">DOM的sibling相关API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nodeType-nodeValue-nodeName"><span class="nav-number">5.</span> <span class="nav-text">nodeType,nodeValue,nodeName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#parentNode-parentElement"><span class="nav-number">6.</span> <span class="nav-text">parentNode,parentElement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#innerText-textContent的区别看这篇文章"><span class="nav-number">7.</span> <span class="nav-text">innerText,textContent的区别看这篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node接口提供的方法"><span class="nav-number">8.</span> <span class="nav-text">Node接口提供的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Document提供的部分接口"><span class="nav-number">9.</span> <span class="nav-text">Document提供的部分接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Element提供的接口"><span class="nav-number">10.</span> <span class="nav-text">Element提供的接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单的看一下HTMLElement"><span class="nav-number">11.</span> <span class="nav-text">简单的看一下HTMLElement</span></a></li></ol></div>
             
 
           </div>
