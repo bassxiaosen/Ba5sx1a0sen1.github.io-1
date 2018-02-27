@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,DOM,API," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTML代码今天学习的时候是学习自己去封装API,先装逼写出ul&amp;gt;li#item${选项$}*5然后按下tab,我们的HTML代码就出来啦12345678910111213141516&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&amp;lt;title&amp;gt;xxx&amp;lt;/title&amp;gt;&amp;l">
+<meta name="keywords" content="JavaScript,DOM,API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="试试造API,初探jQuery">
+<meta property="og:url" content="http://yoursite.com/2018/02/27/试试造API-初探jQuery/index.html">
+<meta property="og:site_name" content="Bass小森的博客">
+<meta property="og:description" content="HTML代码今天学习的时候是学习自己去封装API,先装逼写出ul&amp;gt;li#item${选项$}*5然后按下tab,我们的HTML代码就出来啦12345678910111213141516&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&amp;lt;title&amp;gt;xxx&amp;lt;/title&amp;gt;&amp;l">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/testjq-html.png">
+<meta property="og:updated_time" content="2018-02-27T13:34:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="试试造API,初探jQuery">
+<meta name="twitter:description" content="HTML代码今天学习的时候是学习自己去封装API,先装逼写出ul&amp;gt;li#item${选项$}*5然后按下tab,我们的HTML代码就出来啦12345678910111213141516&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&amp;lt;title&amp;gt;xxx&amp;lt;/title&amp;gt;&amp;l">
+<meta name="twitter:image" content="http://yoursite.com/images/testjq-html.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/27/试试造API-初探jQuery/"/>
+
+
+
+
+
+  <title>试试造API,初探jQuery | Bass小森的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bass小森的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/27/试试造API-初探jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">试试造API,初探jQuery</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T20:38:17+08:00">
+                2018-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><p>今天学习的时候是学习自己去封装API,先装逼写出ul&gt;li#item${选项$}*5然后按下<code>tab</code>,我们的HTML代码就出来啦<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item5"</span>&gt;</span>选项5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>展示出来的效果如图所示<img src="/images/testjq-html.png" alt=""></p>
+<h3 id="初尝试"><a href="#初尝试" class="headerlink" title="初尝试"></a>初尝试</h3><p><a href="http://js.jirengu.com/xahoyeheja/1/edit?html,js,output" target="_blank" rel="noopener">http://js.jirengu.com/xahoyeheja/1/edit?html,js,output</a><br>好了HTML代码写好了我们来造API吧,我们的需求是给这五个<code>li</code>的任意其中一个找出他的所有兄弟姐妹,还有就是为一个<code>li</code>添加class,那我们就上我们的第一版js代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取节点的兄弟姐妹但不包括自己</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">    <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">        array[array.length] =allChild[i];</span><br><span class="line">        array.length++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addClass</span>(<span class="params">node,classes</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">        <span class="keyword">var</span> value = classes[key]</span><br><span class="line">        <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">        node.classList[methodName](key)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.ssdom = &#123;&#125; <span class="comment">//命名空间,仿照dom操作放在Document上,用来装逼,说是自己写的库,让别人知道库名和防止变量冲突,知名的雅虎的YUI库就是这么实现的</span></span><br><span class="line">ssdom.getSiblings = getSiblings</span><br><span class="line">ssdom.addClass = addClass</span><br><span class="line"></span><br><span class="line">ssdom.getSiblings(item2)</span><br><span class="line">ssdom.addClass(item3,&#123;<span class="string">'a'</span>:<span class="literal">true</span>,<span class="string">'b'</span>:<span class="literal">false</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>这个代码里面我们在window上声明了一个叫做ssdom的对象,用来把我们的API扔进去,这玩意就叫命名空间,可以当做是一个库名,并防止变量冲突</p>
+<h3 id="再试试能不能挂载到元素上-让元素调用"><a href="#再试试能不能挂载到元素上-让元素调用" class="headerlink" title="再试试能不能挂载到元素上,让元素调用"></a>再试试能不能挂载到元素上,让元素调用</h3><p><a href="http://js.jirengu.com/xufanibobe/1/edit?js,output" target="_blank" rel="noopener">http://js.jirengu.com/xufanibobe/1/edit?js,output</a><br>上面的代码我们其实是实现了造API的功能,但是呢,我们能不能把API直接给元素调用,而不用我们把元素节点传进去?答案是可以的,<br>我们便改造以下代码出来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Node.prototype.getSiblings = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allChild = <span class="keyword">this</span>.parentNode.children</span><br><span class="line">    <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(allChild[i] !== <span class="keyword">this</span>)&#123;</span><br><span class="line">        array[array.length] =allChild[i];</span><br><span class="line">        array.length++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.prototype.addClass= <span class="function"><span class="keyword">function</span>(<span class="params">classes</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">        <span class="keyword">var</span> value = classes[key]</span><br><span class="line">        <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">        <span class="keyword">this</span>.classList[methodName](key)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(item1.getSiblings.call(item1))</span><br><span class="line"><span class="comment">//相当于item1.getSiblings()</span></span><br><span class="line">item3.addClass.call(item3,&#123;<span class="string">'a'</span>:<span class="literal">true</span>,<span class="string">'b'</span>:<span class="literal">true</span>&#125;)</span><br><span class="line"><span class="comment">//相当于与item3.addClass(&#123;'a':true,'b':true&#125;)</span></span><br></pre></td></tr></table></figure></p>
+<p>这样做又有个弊端,原型上不小心写同名的函数又会覆盖,所以又回到类似命名空间的场景,而且,js代码很不推荐直接在原型上添加方法,这种做法是十分危险的</p>
+<h3 id="那能不能做的更好"><a href="#那能不能做的更好" class="headerlink" title="那能不能做的更好?"></a>那能不能做的更好?</h3><p>我们可以采取另一种封装方式,直接上我们的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.Node2 = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getSiblings()&#123;</span><br><span class="line">            <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">            <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">                array[array.length] =allChild[i];</span><br><span class="line">                array.length++</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> array</span><br><span class="line">        &#125;,</span><br><span class="line">        addClass(classes)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">                <span class="keyword">var</span> value = classes[key]</span><br><span class="line">                <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">                node.classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node2 = Node2(item3)</span><br><span class="line"><span class="built_in">console</span>.log(node2.getSiblings())</span><br></pre></td></tr></table></figure></p>
+<p>这样的封装方式,是很不错的,我们只要传入一个节点参数,然后返回一个方法对象用于操作这个节点,把我们这个方法名Node2改成jQuery,就能理解jQuery内部大致就是这样实现,返回给你一个对象,并附带api给你调用</p>
+<p>但是现在还长得不像jQuery,jQuery可以通过选择器找到节点,我们能不能再进一步优化我们的代码做的更像jQuery呢?我们的改动如下</p>
+<h3 id="改的像jQuery"><a href="#改的像jQuery" class="headerlink" title="改的像jQuery"></a>改的像jQuery</h3><p><a href="http://js.jirengu.com/jucutasaku/1/edit?js,output" target="_blank" rel="noopener">http://js.jirengu.com/jucutasaku/1/edit?js,output</a><br>我们可以采取另一种封装方式,直接上我们的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params">nodeOrSelector</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> node</span><br><span class="line">    <span class="keyword">typeof</span> nodeOrSelector === <span class="string">'string'</span> </span><br><span class="line">    ? node = <span class="built_in">document</span>.querySelector(nodeOrSelector)<span class="comment">//这API很棒,兼容到IE8,但是在IE8下只能支持css2.1的选择器</span></span><br><span class="line">    : node = nodeOrSelector</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getSiblings()&#123;</span><br><span class="line">            <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">            <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">                array[array.length] =allChild[i];</span><br><span class="line">                array.length++</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> array</span><br><span class="line">        &#125;,</span><br><span class="line">        addClass(classes)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">                <span class="keyword">var</span> value = classes[key]</span><br><span class="line">                <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">                node.classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node2 = jQuery(<span class="string">'item3'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(node2.getSiblings())</span><br></pre></td></tr></table></figure></p>
+<p>我们只需要使用Queryselector这个方法去模拟获取选择器,就很不错了,目前高版本的jquery也已经舍弃对低版本的ie的支持,jQuery的1.7版本兼容到ie7,这里我们不考虑如何做到兼容性更好,所以我们可以这么说,jQuery实质是一个构造函数,接收一个参数,这个参数可能是节点,然后返回一个方法对象去操作节点</p>
+<h3 id="虽然支持选择器-但是只能找到单个元素节点啊"><a href="#虽然支持选择器-但是只能找到单个元素节点啊" class="headerlink" title="虽然支持选择器,但是只能找到单个元素节点啊?"></a>虽然支持选择器,但是只能找到单个元素节点啊?</h3><p><a href="http://js.jirengu.com/gahamemece/1/edit?html,js,output" target="_blank" rel="noopener">http://js.jirengu.com/gahamemece/1/edit?html,js,output</a><br>然而,需求又变得变态了,如果我想同时操作多个节点,怎么搞?上面的代码明显变得不行了,我们得重新写让他能支持多节点操作,上面的代码只支持单节点操作啊,原因就在于我们使用的是<code>querySelector</code>这个API,我们只要改进为<code>querySelectorAll</code>即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params">nodeOrSelector</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> nodes = &#123;&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> nodeOrSelector === <span class="string">'string'</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> temp = <span class="built_in">document</span>.querySelectorAll(nodeOrSelector) <span class="comment">//伪数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;temp.length;i++)&#123;</span><br><span class="line">            nodes[i] = temp[i]</span><br><span class="line">        &#125;</span><br><span class="line">        nodes.length = temp.length</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nodeOrSelector <span class="keyword">instanceof</span> Node)&#123;</span><br><span class="line">        nodes = &#123;</span><br><span class="line">            <span class="number">0</span>:nodeOrSelector,</span><br><span class="line">            length:<span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.addClass = <span class="function"><span class="keyword">function</span>(<span class="params">classes</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">            <span class="keyword">var</span> value = classes[key]</span><br><span class="line">            <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">                nodes[i].classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.getTexts = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> texts = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            texts.push(nodes[i].textContent)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> texts</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.setTexts = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            nodes[i].textContent = text</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.text = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(text === <span class="literal">undefined</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> texts = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            texts.push(nodes[i].textContent)</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">return</span> texts</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">                nodes[i].textContent = text</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> nodes;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> nodes2 = jQuery(<span class="string">'ul &gt; li'</span>)</span><br><span class="line">nodes2.addClass(&#123;<span class="string">'blue'</span>:<span class="literal">true</span>&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(nodes2.getTexts())</span><br><span class="line">nodes2.setTexts(<span class="string">'hihi'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(nodes2.getTexts())</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/DOM/" rel="tag"># DOM</a>
+          
+            <a href="/tags/API/" rel="tag"># API</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/25/JavaScript之变态API-DOM/" rel="next" title="JavaScript之变态API-DOM">
+                <i class="fa fa-chevron-left"></i> JavaScript之变态API-DOM
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Bass小森的博客" />
+            
+              <p class="site-author-name" itemprop="name">Bass小森的博客</p>
+              <p class="site-description motion-element" itemprop="description">个人技术学习总结笔记</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML代码"><span class="nav-number">1.</span> <span class="nav-text">HTML代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初尝试"><span class="nav-number">2.</span> <span class="nav-text">初尝试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再试试能不能挂载到元素上-让元素调用"><span class="nav-number">3.</span> <span class="nav-text">再试试能不能挂载到元素上,让元素调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那能不能做的更好"><span class="nav-number">4.</span> <span class="nav-text">那能不能做的更好?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改的像jQuery"><span class="nav-number">5.</span> <span class="nav-text">改的像jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虽然支持选择器-但是只能找到单个元素节点啊"><span class="nav-number">6.</span> <span class="nav-text">虽然支持选择器,但是只能找到单个元素节点啊?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bass小森的博客</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
