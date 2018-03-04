@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="jQuery," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="个人技术学习总结笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bass小森的博客">
-<meta property="og:url" content="http://yoursite.com/tags/API/index.html">
+<meta name="description" content="还是用jQuery做一个无缝轮播，但还是没用上面向对象的知识，先从普通的功能性代码写起，等我真真实实的弄懂前端面向对象的使用，再来重新编写，这里还是想吐槽下无缝轮播这玩意，自己写的话坑点还是蛮多的，还是有个bug，快速点击上下张按钮切换就会出现类似乱序的现象，原因是我这里使用的是偷梁换柱的方式预览地址：https://ba5sx1a0sen1.github.io/seamless-slide-2/">
+<meta name="keywords" content="jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搞个无缝轮播">
+<meta property="og:url" content="http://yoursite.com/2018/03/04/搞个无缝轮播/index.html">
 <meta property="og:site_name" content="Bass小森的博客">
-<meta property="og:description" content="个人技术学习总结笔记">
+<meta property="og:description" content="还是用jQuery做一个无缝轮播，但还是没用上面向对象的知识，先从普通的功能性代码写起，等我真真实实的弄懂前端面向对象的使用，再来重新编写，这里还是想吐槽下无缝轮播这玩意，自己写的话坑点还是蛮多的，还是有个bug，快速点击上下张按钮切换就会出现类似乱序的现象，原因是我这里使用的是偷梁换柱的方式预览地址：https://ba5sx1a0sen1.github.io/seamless-slide-2/">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-04T11:00:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bass小森的博客">
-<meta name="twitter:description" content="个人技术学习总结笔记">
+<meta name="twitter:title" content="搞个无缝轮播">
+<meta name="twitter:description" content="还是用jQuery做一个无缝轮播，但还是没用上面向对象的知识，先从普通的功能性代码写起，等我真真实实的弄懂前端面向对象的使用，再来重新编写，这里还是想吐槽下无缝轮播这玩意，自己写的话坑点还是蛮多的，还是有个bug，快速点击上下张按钮切换就会出现类似乱序的现象，原因是我这里使用的是偷梁换柱的方式预览地址：https://ba5sx1a0sen1.github.io/seamless-slide-2/">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/API/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/04/搞个无缝轮播/"/>
 
 
 
 
 
-  <title>标签: API | Bass小森的博客</title>
+  <title>搞个无缝轮播 | Bass小森的博客</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,54 +239,147 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>API<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/搞个无缝轮播/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/27/试试造API-初探jQuery/" itemprop="url">
-              
-                <span itemprop="name">试试造API,初探jQuery</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">搞个无缝轮播</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-27T20:38:17+08:00"
-              content="2018-02-27" >
-          02-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T18:56:02+08:00">
+                2018-03-04
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>还是用jQuery做一个无缝轮播，但还是没用上面向对象的知识，先从普通的功能性代码写起，等我真真实实的弄懂前端面向对象的使用，再来重新编写，这里还是想吐槽下无缝轮播这玩意，自己写的话坑点还是蛮多的，还是有个bug，快速点击上下张按钮切换就会出现类似乱序的现象，原因是我这里使用的是偷梁换柱的方式<br>预览地址：<a href="https://ba5sx1a0sen1.github.io/seamless-slide-2/index.html" target="_blank" rel="noopener">https://ba5sx1a0sen1.github.io/seamless-slide-2/index.html</a><br>代码地址：<a href="https://github.com/Ba5sx1a0sen1/seamless-slide-2" target="_blank" rel="noopener">https://github.com/Ba5sx1a0sen1/seamless-slide-2</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/28/初次使用jQuery写轮播/" rel="next" title="初次使用jQuery写轮播">
+                <i class="fa fa-chevron-left"></i> 初次使用jQuery写轮播
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -292,6 +387,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -525,6 +624,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
