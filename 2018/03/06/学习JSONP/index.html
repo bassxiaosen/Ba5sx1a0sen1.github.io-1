@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JSON," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="个人技术学习总结笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bass小森的博客">
-<meta property="og:url" content="http://yoursite.com/tags/HTML/index.html">
+<meta name="description" content="JSONP是什么？ 请求方动态创建一个&amp;lt;script&amp;gt;标签，src属性指向响应方，同时传一个查询参数如?callbackName=xxx 响应方根据查询参数callbackName，构造形如 xxx.call(undefined,’需要的数据’) xxx.call(‘需要的数据’)   浏览器方接收到响应，就会执行xxx.call(undefined,&amp;#39;你要的数据 &amp;#39;)">
+<meta name="keywords" content="JSON">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习JSONP">
+<meta property="og:url" content="http://yoursite.com/2018/03/06/学习JSONP/index.html">
 <meta property="og:site_name" content="Bass小森的博客">
-<meta property="og:description" content="个人技术学习总结笔记">
+<meta property="og:description" content="JSONP是什么？ 请求方动态创建一个&amp;lt;script&amp;gt;标签，src属性指向响应方，同时传一个查询参数如?callbackName=xxx 响应方根据查询参数callbackName，构造形如 xxx.call(undefined,’需要的数据’) xxx.call(‘需要的数据’)   浏览器方接收到响应，就会执行xxx.call(undefined,&amp;#39;你要的数据 &amp;#39;)">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-06T12:47:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bass小森的博客">
-<meta name="twitter:description" content="个人技术学习总结笔记">
+<meta name="twitter:title" content="学习JSONP">
+<meta name="twitter:description" content="JSONP是什么？ 请求方动态创建一个&amp;lt;script&amp;gt;标签，src属性指向响应方，同时传一个查询参数如?callbackName=xxx 响应方根据查询参数callbackName，构造形如 xxx.call(undefined,’需要的数据’) xxx.call(‘需要的数据’)   浏览器方接收到响应，就会执行xxx.call(undefined,&amp;#39;你要的数据 &amp;#39;)">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/HTML/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/06/学习JSONP/"/>
 
 
 
 
 
-  <title>标签: HTML | Bass小森的博客</title>
+  <title>学习JSONP | Bass小森的博客</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,110 +239,167 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>HTML<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/学习JSONP/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/08/HTML疑难标签-2-form与table/" itemprop="url">
-              
-                <span itemprop="name">HTML疑难标签(2)-form与table</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">学习JSONP</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-08T01:11:45+08:00"
-              content="2018-02-08" >
-          02-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T20:19:03+08:00">
+                2018-03-06
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/08/HTML疑难标签-1-iframe与a/" itemprop="url">
-              
-                <span itemprop="name">HTML疑难标签(1)-iframe与a</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-08T00:23:44+08:00"
-              content="2018-02-08" >
-          02-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/07/HTML学习小简介/" itemprop="url">
-              
-                <span itemprop="name">HTML学习小简介</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-07T13:59:07+08:00"
-              content="2018-02-07" >
-          02-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h3 id="JSONP是什么？"><a href="#JSONP是什么？" class="headerlink" title="JSONP是什么？"></a>JSONP是什么？</h3><ol>
+<li>请求方动态创建一个<code>&lt;script&gt;</code>标签，<code>src</code>属性指向响应方，同时传一个查询参数如<code>?callbackName=xxx</code></li>
+<li>响应方根据查询参数callbackName，构造形如<ol>
+<li>xxx.call(undefined,’需要的数据’)</li>
+<li>xxx.call(‘需要的数据’)</li>
+</ol>
+</li>
+<li>浏览器方接收到响应，就会执行<code>xxx.call(undefined,&#39;你要的数据 &#39;)</code></li>
+<li>那么请求方就知道了他要的数据</li>
+</ol>
+<p>这就是JSONP</p>
+<p>有关行业内的约定</p>
+<h3 id="行业的约定："><a href="#行业的约定：" class="headerlink" title="行业的约定："></a>行业的约定：</h3><ol>
+<li>callbackName -&gt; callback</li>
+<li>xxx -&gt; 随机数 xxx随机数</li>
+</ol>
+<p>即回调函数的查询参数名称是<code>callback</code>，调用的函数名是结合随机数动态生成创建后调用再删除的，jQuery的jsonp方法便是采用这样的约定实现的</p>
+<h3 id="JSONP-为什么不支持-POST"><a href="#JSONP-为什么不支持-POST" class="headerlink" title="JSONP 为什么不支持 POST"></a>JSONP 为什么不支持 POST</h3><ol>
+<li>因为jsonp是通过动态创建script标签实现的</li>
+<li>动态创建script的时候只能使用get，无法使用post</li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JSON/" rel="tag"># JSON</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/04/搞个无缝轮播/" rel="next" title="搞个无缝轮播">
+                <i class="fa fa-chevron-left"></i> 搞个无缝轮播
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +407,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -368,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -433,6 +505,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JSONP是什么？"><span class="nav-number">1.</span> <span class="nav-text">JSONP是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行业的约定："><span class="nav-number">2.</span> <span class="nav-text">行业的约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSONP-为什么不支持-POST"><span class="nav-number">3.</span> <span class="nav-text">JSONP 为什么不支持 POST</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -581,6 +669,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
