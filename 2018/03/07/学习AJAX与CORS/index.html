@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究展示数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
+<meta name="description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究获取数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习AJAX与CORS">
 <meta property="og:url" content="http://yoursite.com/2018/03/07/学习AJAX与CORS/index.html">
 <meta property="og:site_name" content="Bass小森的博客">
-<meta property="og:description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究展示数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
+<meta property="og:description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究获取数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T01:02:51.000Z">
+<meta property="og:updated_time" content="2018-03-07T07:51:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习AJAX与CORS">
-<meta name="twitter:description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究展示数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
+<meta name="twitter:description" content="今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究获取数据的方式：  JSONP https://github.com/Ba5sx1a0sen1/node-jsonp AJAX 结合CORS https://github.com/Ba5sx1a0sen1/node-ajax  两种方式对比：  JSONP上一篇文章已经提到过，JSONP方式前端">
 
 
 
@@ -320,14 +320,14 @@
       
 
       
-        <p>今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究展示数据的方式：</p>
+        <p>今天写了两个前后端通讯的小的demo，后端主要使用node来做简单的服务器响应，前端非常简单只是用于研究获取数据的方式：</p>
 <ol>
 <li><code>JSONP</code> <a href="https://github.com/Ba5sx1a0sen1/node-jsonp" target="_blank" rel="noopener">https://github.com/Ba5sx1a0sen1/node-jsonp</a></li>
 <li><code>AJAX</code> 结合CORS <a href="https://github.com/Ba5sx1a0sen1/node-ajax" target="_blank" rel="noopener">https://github.com/Ba5sx1a0sen1/node-ajax</a></li>
 </ol>
 <p>两种方式对比：</p>
 <ol>
-<li><code>JSONP</code>上一篇文章已经提到过，<code>JSONP</code>方式前端动态创建一个<code>&lt;script&gt;</code>标签，然后<code>src</code>属性指向另一个源的接口，然后接口只要返回一串<code>JavaScript</code>代码调用前端的函数几口</li>
+<li><code>JSONP</code>上一篇文章已经提到过，<code>JSONP</code>方式前端动态创建一个<code>&lt;script&gt;</code>标签，然后<code>src</code>属性指向另一个源的接口，然后接口只要返回一串<code>JavaScript</code>代码调用前端的函数</li>
 <li><code>AJAX -CORS</code>，是现代前端使用的与后端通讯的重要方法，AJAX有四句话相当重要，如下： <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> request = <span class="keyword">new</span> XMLHttpRequest <span class="comment">//声明一个xmlhttprequest对象</span></span><br><span class="line">request.onreadystatechange=<span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125; <span class="comment">//响应成功后相关的处理函数</span></span><br><span class="line">request.open(<span class="string">'GET'</span>,<span class="string">'/xxx'</span>)    <span class="comment">//重要API，用于设置方法与接口路径</span></span><br><span class="line">request.send() <span class="comment">//重要API，可传入HTTP第四部分需要的数据，另有一个方法可以设置HTTP第二部分的key-value值：setRequestHeader()</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -373,6 +373,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/07/AJAX离不开HTTP/" rel="prev" title="AJAX离不开HTTP">
+                AJAX离不开HTTP <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -444,7 +448,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
