@@ -252,6 +252,501 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/初次使用jQuery写轮播/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/28/初次使用jQuery写轮播/" itemprop="url">初次使用jQuery写轮播</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T17:29:19+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>写了个轮播demo,还没用上面向对象知识,目前这代码可用性还不强,后面学习了面向对象再来改造改造代码<br>线上预览地址: <a href="https://ba5sx1a0sen1.github.io/jQuery-slide/index.html" target="_blank" rel="noopener">https://ba5sx1a0sen1.github.io/jQuery-slide/index.html</a><br>代码地址: <a href="https://github.com/Ba5sx1a0sen1/jQuery-slide" target="_blank" rel="noopener">https://github.com/Ba5sx1a0sen1/jQuery-slide</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/27/试试造API-初探jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/27/试试造API-初探jQuery/" itemprop="url">试试造API,初探jQuery</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T20:38:17+08:00">
+                2018-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><p>今天学习的时候是学习自己去封装API,先装逼写出ul&gt;li#item${选项$}*5然后按下<code>tab</code>,我们的HTML代码就出来啦<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>xxx<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"item5"</span>&gt;</span>选项5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>展示出来的效果如图所示<img src="/images/testjq-html.png" alt=""></p>
+<h3 id="初尝试"><a href="#初尝试" class="headerlink" title="初尝试"></a>初尝试</h3><p><a href="http://js.jirengu.com/xahoyeheja/1/edit?html,js,output" target="_blank" rel="noopener">http://js.jirengu.com/xahoyeheja/1/edit?html,js,output</a><br>好了HTML代码写好了我们来造API吧,我们的需求是给这五个<code>li</code>的任意其中一个找出他的所有兄弟姐妹,还有就是为一个<code>li</code>添加class,那我们就上我们的第一版js代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取节点的兄弟姐妹但不包括自己</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">    <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">        array[array.length] =allChild[i];</span><br><span class="line">        array.length++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addClass</span>(<span class="params">node,classes</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">        <span class="keyword">var</span> value = classes[key]</span><br><span class="line">        <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">        node.classList[methodName](key)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.ssdom = &#123;&#125; <span class="comment">//命名空间,仿照dom操作放在Document上,用来装逼,说是自己写的库,让别人知道库名和防止变量冲突,知名的雅虎的YUI库就是这么实现的</span></span><br><span class="line">ssdom.getSiblings = getSiblings</span><br><span class="line">ssdom.addClass = addClass</span><br><span class="line"></span><br><span class="line">ssdom.getSiblings(item2)</span><br><span class="line">ssdom.addClass(item3,&#123;<span class="string">'a'</span>:<span class="literal">true</span>,<span class="string">'b'</span>:<span class="literal">false</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>这个代码里面我们在window上声明了一个叫做ssdom的对象,用来把我们的API扔进去,这玩意就叫命名空间,可以当做是一个库名,并防止变量冲突</p>
+<h3 id="再试试能不能挂载到元素上-让元素调用"><a href="#再试试能不能挂载到元素上-让元素调用" class="headerlink" title="再试试能不能挂载到元素上,让元素调用"></a>再试试能不能挂载到元素上,让元素调用</h3><p><a href="http://js.jirengu.com/xufanibobe/1/edit?js,output" target="_blank" rel="noopener">http://js.jirengu.com/xufanibobe/1/edit?js,output</a><br>上面的代码我们其实是实现了造API的功能,但是呢,我们能不能把API直接给元素调用,而不用我们把元素节点传进去?答案是可以的,<br>我们便改造以下代码出来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Node.prototype.getSiblings = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allChild = <span class="keyword">this</span>.parentNode.children</span><br><span class="line">    <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(allChild[i] !== <span class="keyword">this</span>)&#123;</span><br><span class="line">        array[array.length] =allChild[i];</span><br><span class="line">        array.length++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node.prototype.addClass= <span class="function"><span class="keyword">function</span>(<span class="params">classes</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">        <span class="keyword">var</span> value = classes[key]</span><br><span class="line">        <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">        <span class="keyword">this</span>.classList[methodName](key)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(item1.getSiblings.call(item1))</span><br><span class="line"><span class="comment">//相当于item1.getSiblings()</span></span><br><span class="line">item3.addClass.call(item3,&#123;<span class="string">'a'</span>:<span class="literal">true</span>,<span class="string">'b'</span>:<span class="literal">true</span>&#125;)</span><br><span class="line"><span class="comment">//相当于与item3.addClass(&#123;'a':true,'b':true&#125;)</span></span><br></pre></td></tr></table></figure></p>
+<p>这样做又有个弊端,原型上不小心写同名的函数又会覆盖,所以又回到类似命名空间的场景,而且,js代码很不推荐直接在原型上添加方法,这种做法是十分危险的</p>
+<h3 id="那能不能做的更好"><a href="#那能不能做的更好" class="headerlink" title="那能不能做的更好?"></a>那能不能做的更好?</h3><p>我们可以采取另一种封装方式,直接上我们的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.Node2 = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getSiblings()&#123;</span><br><span class="line">            <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">            <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">                array[array.length] =allChild[i];</span><br><span class="line">                array.length++</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> array</span><br><span class="line">        &#125;,</span><br><span class="line">        addClass(classes)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">                <span class="keyword">var</span> value = classes[key]</span><br><span class="line">                <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">                node.classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node2 = Node2(item3)</span><br><span class="line"><span class="built_in">console</span>.log(node2.getSiblings())</span><br></pre></td></tr></table></figure></p>
+<p>这样的封装方式,是很不错的,我们只要传入一个节点参数,然后返回一个方法对象用于操作这个节点,把我们这个方法名Node2改成jQuery,就能理解jQuery内部大致就是这样实现,返回给你一个对象,并附带api给你调用</p>
+<p>但是现在还长得不像jQuery,jQuery可以通过选择器找到节点,我们能不能再进一步优化我们的代码做的更像jQuery呢?我们的改动如下</p>
+<h3 id="改的像jQuery"><a href="#改的像jQuery" class="headerlink" title="改的像jQuery"></a>改的像jQuery</h3><p><a href="http://js.jirengu.com/jucutasaku/1/edit?js,output" target="_blank" rel="noopener">http://js.jirengu.com/jucutasaku/1/edit?js,output</a><br>我们可以采取另一种封装方式,直接上我们的代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params">nodeOrSelector</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> node</span><br><span class="line">    <span class="keyword">typeof</span> nodeOrSelector === <span class="string">'string'</span> </span><br><span class="line">    ? node = <span class="built_in">document</span>.querySelector(nodeOrSelector)<span class="comment">//这API很棒,兼容到IE8,但是在IE8下只能支持css2.1的选择器</span></span><br><span class="line">    : node = nodeOrSelector</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        getSiblings()&#123;</span><br><span class="line">            <span class="keyword">var</span> allChild = node.parentNode.children</span><br><span class="line">            <span class="keyword">var</span> array = &#123;<span class="attr">length</span>:<span class="number">0</span>&#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;allChild.length; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(allChild[i] !== node)&#123;</span><br><span class="line">                array[array.length] =allChild[i];</span><br><span class="line">                array.length++</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> array</span><br><span class="line">        &#125;,</span><br><span class="line">        addClass(classes)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">                <span class="keyword">var</span> value = classes[key]</span><br><span class="line">                <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">                node.classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">node2 = jQuery(<span class="string">'item3'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(node2.getSiblings())</span><br></pre></td></tr></table></figure></p>
+<p>我们只需要使用Queryselector这个方法去模拟获取选择器,就很不错了,目前高版本的jquery也已经舍弃对低版本的ie的支持,jQuery的1.7版本兼容到ie7,这里我们不考虑如何做到兼容性更好,所以我们可以这么说,jQuery实质是一个构造函数,接收一个参数,这个参数可能是节点,然后返回一个方法对象去操作节点</p>
+<h3 id="虽然支持选择器-但是只能找到单个元素节点啊"><a href="#虽然支持选择器-但是只能找到单个元素节点啊" class="headerlink" title="虽然支持选择器,但是只能找到单个元素节点啊?"></a>虽然支持选择器,但是只能找到单个元素节点啊?</h3><p><a href="http://js.jirengu.com/gahamemece/1/edit?html,js,output" target="_blank" rel="noopener">http://js.jirengu.com/gahamemece/1/edit?html,js,output</a><br>然而,需求又变得变态了,如果我想同时操作多个节点,怎么搞?上面的代码明显变得不行了,我们得重新写让他能支持多节点操作,上面的代码只支持单节点操作啊,原因就在于我们使用的是<code>querySelector</code>这个API,我们只要改进为<code>querySelectorAll</code>即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.jQuery = <span class="function"><span class="keyword">function</span>(<span class="params">nodeOrSelector</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> nodes = &#123;&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> nodeOrSelector === <span class="string">'string'</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> temp = <span class="built_in">document</span>.querySelectorAll(nodeOrSelector) <span class="comment">//伪数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;temp.length;i++)&#123;</span><br><span class="line">            nodes[i] = temp[i]</span><br><span class="line">        &#125;</span><br><span class="line">        nodes.length = temp.length</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nodeOrSelector <span class="keyword">instanceof</span> Node)&#123;</span><br><span class="line">        nodes = &#123;</span><br><span class="line">            <span class="number">0</span>:nodeOrSelector,</span><br><span class="line">            length:<span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.addClass = <span class="function"><span class="keyword">function</span>(<span class="params">classes</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> key <span class="keyword">in</span> classes)&#123;</span><br><span class="line">            <span class="keyword">var</span> value = classes[key]</span><br><span class="line">            <span class="keyword">var</span> methodName = value?<span class="string">'add'</span>:<span class="string">'remove'</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">                nodes[i].classList[methodName](key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.getTexts = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> texts = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            texts.push(nodes[i].textContent)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> texts</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.setTexts = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            nodes[i].textContent = text</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    nodes.text = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(text === <span class="literal">undefined</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> texts = []</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">            texts.push(nodes[i].textContent)</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">return</span> texts</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;nodes.length;i++)&#123;</span><br><span class="line">                nodes[i].textContent = text</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> nodes;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> nodes2 = jQuery(<span class="string">'ul &gt; li'</span>)</span><br><span class="line">nodes2.addClass(&#123;<span class="string">'blue'</span>:<span class="literal">true</span>&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(nodes2.getTexts())</span><br><span class="line">nodes2.setTexts(<span class="string">'hihi'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(nodes2.getTexts())</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/JavaScript之变态API-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/25/JavaScript之变态API-DOM/" itemprop="url">JavaScript之变态API-DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-25T14:40:20+08:00">
+                2018-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="DOM是啥玩意"><a href="#DOM是啥玩意" class="headerlink" title="DOM是啥玩意?"></a>DOM是啥玩意?</h3><p>DOM全称叫做Document Object Model,老是听人说dom树dom树到底是什么?<br>document和object之间的映射关系就是model,形成了一棵树</p>
+<h3 id="DOM的元素对象"><a href="#DOM的元素对象" class="headerlink" title="DOM的元素对象"></a>DOM的元素对象</h3><p>看以下代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!Doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">'zh-Hans'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>hahaha<span class="comment">&lt;!--aaa--&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个简单的例子中有三种节点对象,分别是Element,Text,Document,Comment,都继承于顶层Node对象,<br>Document是最牛逼最顶层的,指代的是html文档最顶层的<code>html</code>对象</p>
+<h3 id="DOM的child相关API"><a href="#DOM的child相关API" class="headerlink" title="DOM的child相关API"></a>DOM的child相关API</h3><p><code>.childNodes</code>属性是返回子节点的集合,<code>.children</code>则返回的是子<strong>标签</strong>的集合<br><code>firstChild</code>返回的是第一个节点,是由Node对象提供的;<code>firstElementChild</code>返回的是第一个子标签,由Element对象提供<br><code>lastChild</code>,<code>lasttElementChild</code></p>
+<h3 id="DOM的sibling相关API"><a href="#DOM的sibling相关API" class="headerlink" title="DOM的sibling相关API"></a>DOM的sibling相关API</h3><p><code>nextSibling</code>,<code>previousSibling</code>返回相邻的节点,<code>nextElementSibling</code>,<code>previousElementSibling</code>返回相邻的标签</p>
+<h3 id="nodeType-nodeValue-nodeName"><a href="#nodeType-nodeValue-nodeName" class="headerlink" title="nodeType,nodeValue,nodeName"></a>nodeType,nodeValue,nodeName</h3><p>Node.Element_Node == 1 表示元素的nodeType == 1<br>Node.Text_Node == 3 表示文本节点的nodeType == 3<br>Node.Comment_Node == 8 表示注释节点的nodeType == 8</p>
+<h3 id="parentNode-parentElement"><a href="#parentNode-parentElement" class="headerlink" title="parentNode,parentElement"></a>parentNode,parentElement</h3><p>一个返回节点,一个返回元素,如果不存在则返回<code>null</code></p>
+<h3 id="innerText-textContent的区别看这篇文章"><a href="#innerText-textContent的区别看这篇文章" class="headerlink" title="innerText,textContent的区别看这篇文章"></a>innerText,textContent的区别看这篇文章</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent</a></p>
+<h3 id="Node接口提供的方法"><a href="#Node接口提供的方法" class="headerlink" title="Node接口提供的方法"></a>Node接口提供的方法</h3><p><code>appendChild()</code>,参数为节点,可以是ElementNode和TextNode<br><code>cloneChild()</code>,接收一个参数<code>true</code>或者<code>false</code>,进行深拷贝还是浅拷贝,在最新标准中是缺省默认值是<code>false</code><br><code>contains()</code>,接收一个节点做参数,判断是否被包含,返回<code>true</code>或<code>false</code><br><code>hasChildNodes()</code>,判断是否有子节点,返回<code>true</code>或者<code>false</code><br><code>insertBefore()</code>,插入节点,接收两个参数,一个是新插入节点,一个是用于相对插入当前节点的后一个节点<br><code>isEqualNode()</code>,<code>isSameNode()</code><br><code>removeChild()</code>,接收一个节点参数,用于删除子节点<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先定位父节点,然后删除其子节点</span></span><br><span class="line"><span class="keyword">var</span> d = <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>);</span><br><span class="line"><span class="keyword">var</span> d_nested = <span class="built_in">document</span>.getElementById(<span class="string">"nested"</span>);</span><br><span class="line"><span class="keyword">var</span> throwawayNode = d.removeChild(d_nested);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无须定位父节点,通过parentNode属性直接删除自身</span></span><br><span class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">"nested"</span>);</span><br><span class="line">    <span class="keyword">if</span> (node.parentNode) &#123;</span><br><span class="line">    node.parentNode.removeChild(node);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移除一个元素节点的所有子节点</span></span><br><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"top"</span>);</span><br><span class="line">    <span class="keyword">while</span> (element.firstChild) &#123;</span><br><span class="line">    element.removeChild(element.firstChild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>replaceChild()</code>,接收两个参数,用于替换子节点</p>
+<h3 id="Document提供的部分接口"><a href="#Document提供的部分接口" class="headerlink" title="Document提供的部分接口"></a>Document提供的部分接口</h3><p>以下是个人认为应用场景多的,需要牢记的,还需记住那些属性是只读的,是可改的,那些API是访问器还是修改器<br>完整的请参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document</a></p>
+<ol>
+<li>属性:<ol>
+<li><code>document.documentElement</code> 对于HTML 文档来说，返回的一般是 HTML 元素。</li>
+<li><code>document.anchor</code> 返回当前 document 的所有的锚点的列表<blockquote>
+<p>由于向后兼容的原因,该属性只返回那些拥有name属性的a元素,而不是那些拥有id属性的a元素.</p>
+</blockquote>
+</li>
+<li><code>Document.body</code> 返回当前文档的 <code>&lt;body&gt;</code> 元素.</li>
+<li><code>Document.cookie</code> 返回文档的由分号分隔的cookie列表，或者设置一个单独的cookie值.<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie</a></li>
+<li><code>Document.forms</code> 返回当前文档中的<code>&lt;form&gt;</code>元素列表,是一个集合</li>
+<li><code>Document.head</code>   返回当前文档的<code>&lt;head&gt;</code>元素</li>
+<li><code>Document.images</code> 返回当前文档的图像列表,也是集合,伪数组</li>
+<li><code>Document.links</code> 返回文档中所有超链接的列表</li>
+<li><code>Document.location</code> 返回当前文档的URI</li>
+<li><code>Document.title</code> 设置或获取当前文档的标题</li>
+<li><code>Document.URL</code> 返回文档的地址字符串</li>
+<li><code>Document.characterSet</code> 返回文档使用的字符集。</li>
+<li><code>ParentNode.childElementCount</code> 返回一个无符号长整型，给出对象含有的后代数量</li>
+<li><code>Document.doctype</code> 返回当前文档的 Document Type Definition (DTD)。</li>
+<li><code>Document.domain</code> 获取/设置当前文档的原始域部分, 用于同源策略.</li>
+<li><code>Document.referrer</code> 返回着链接到当前页面的那个页面的 URL</li>
+<li><code>Document.scripts</code> 返回文档中所有的<code>&lt;script&gt;</code>元素</li>
+<li><code>Document.scrollingElement</code> 返回滚动 document 的 Element 的一个引用。 </li>
+<li><code>Document.styleSheets</code> 返回当前 document 的样式表对象的列表。</li>
+</ol>
+</li>
+<li>方法:<ol>
+<li><code>Document.close()</code> 关闭文档写入流.</li>
+<li><code>Document.open()</code> 打开文档写入流.</li>
+<li><code>document.write()</code> 将一个文本字符串写入由 document.open() 打开的一个文档流。<blockquote>
+<p>注意: 因为 document.write 写入文档流，在关闭(已加载)的文档上调用 document.write 会自动调用              document.open，这将清除该文档。</p>
+</blockquote>
+</li>
+<li><code>document.writeln()</code> 向文档中写入一串文本，并紧跟着一个换行符。</li>
+<li>创建相关API:<ol>
+<li><code>Document.createDocumentFragment()</code> 创建一个新的文档片段</li>
+<li><code>Document.createElement()</code> 用给定的标签名创建一个新的元素</li>
+<li><code>Document.createComment()</code> 创建一个新的注释节点并返回它</li>
+<li><code>Document.createTextNode()</code> 创建一个文字节点</li>
+</ol>
+</li>
+<li>查询获取类相关API:<ol>
+<li><code>getElementById()</code></li>
+<li><code>getElementsByClassName()</code></li>
+<li><code>getElementsByName()</code></li>
+<li><code>getElementsByTagName()</code></li>
+<li><code>getSelection()</code> 返回文档中与选中文本相关的Selection对象.</li>
+<li><code>querySelector()</code></li>
+<li><code>querySelectorAll()</code></li>
+</ol>
+</li>
+<li><code>Document.hasFocus()</code> 如果焦点在当前指定的文档的内部,返回 true .</li>
+</ol>
+</li>
+</ol>
+<h3 id="Element提供的接口"><a href="#Element提供的接口" class="headerlink" title="Element提供的接口"></a>Element提供的接口</h3><ol>
+<li>属性:<ul>
+<li><code>Element.attributes</code> 返回一个与该元素相关的所有属性集合</li>
+<li><code>Element.classList</code> 返回该元素包含的class属性 具备<code>add()</code>,<code>remove()</code>,<code>item()</code>,<code>toggle()</code>,<code>contain()</code>方法</li>
+<li><code>Element.className</code> 表示当前元素的class属性的值,可以是由空格分隔的多个class属性值. </li>
+<li><code>Element.clientHeight</code> 返回Number 表示内部相对于外层元素的高度<br>  <img src="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png" alt="clientHeight"></li>
+<li><code>Element.clientWidth</code> 返回Number 表示该元素它内部的宽度.</li>
+<li><code>Element.clientLeft</code> 返回Number表示该元素距离它左边界的宽度.</li>
+<li><code>Element.clientTop</code> 返回 Number 表示该元素距离它上边界的高度</li>
+<li><code>Element.id</code> 返回这个元素的id字符串.</li>
+<li><code>Element.innerHTML</code> 是一个DOMString 表示这个元素的内容文本</li>
+<li><code>Element.scrollHeight</code>  这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值clientHeight相同。包括元素的padding，但不包括元素的border和margin。scrollHeight也包括 ::before 和 ::after这样的伪元素。<br>  <img src="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png" alt="scrollHeight"></li>
+<li><code>Element.scrollLeft</code> 可以读取或设置元素滚动条到元素左边的距离。</li>
+<li><code>Element.scrollTop</code> 可以获取或设置一个元素的内容垂直滚动的像素数。即滚动了多少的像素数<br>  <img src="https://developer.mozilla.org/@api/deki/files/842/=ScrollTop.png" alt="scrollTop"></li>
+<li><code>Element.scrollWidth</code> 返回类型为： Number ，表示该滚动窗口的宽度 若元素的宽度大于其内容的区域（例如，元素存在滚动条时）, scrollWidth的值要大于clientWidth</li>
+<li><code>Element.TagName</code> 返回类型为：String，表示该元素的标签名,除了<code>&lt;svg&gt;</code>其余都以大写形式返回</li>
+</ul>
+</li>
+<li><p>方法:</p>
+<ul>
+<li>继承自<code>EventTarget</code>的方法<br>  <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget</a><ol>
+<li><code>EventTarget.addEventListener()</code> 在EventTarget上注册特定事件类型的事件处理程序。</li>
+<li><code>EventTarget.removeEventListener()</code> EventTarget中删除事件侦听器。</li>
+<li><code>EventTarget.dispatchEvent()</code> 将事件分派到此EventTarget。</li>
+</ol>
+</li>
+<li><code>Element.getAttribute()</code> 返回元素上一个指定的属性值。如果指定的属性不存在，则返回  null 或 “” （空字符串）<blockquote>
+<p>let attribute = element.getAttribute(attributeName);</p>
+</blockquote>
+</li>
+<li><code>Element.getBoundingClientRect()</code> 返回元素的大小及其相对于视口的位置,返回一个<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMClientRect" target="_blank" rel="noopener">DOMRect</a>对象,DOMRect 对象包含了一组用于描述边框的只读属性——left、top、right和bottom，单位为像素。除了 width 和 height 外的属性都是相对于视口的左上角位置而言的。<br>  <img src="https://mdn.mozillademos.org/files/15087/rect.png" alt="DomRect"></li>
+<li><code>Element.getElementsByClassName()</code> </li>
+<li><code>Element.getElementsByTagName()</code></li>
+<li><code>Element.hasAttribute()</code> <code>var result = element.hasAttribute(attName);</code>  返回一个布尔值，指示该元素是否包含有指定的属性（attribute）</li>
+<li><code>Element.querySelector()</code></li>
+<li><code>Element.querySelectorAll()</code> 返回一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList" target="_blank" rel="noopener">NodeList</a></li>
+<li><p><code>ChildNode.remove()</code> 把一个节点从它所属的DOM树中删除<br>  语法:</p>
+<blockquote>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">elementNodeReference.remove();</span><br></pre></td></tr></table></figure>
+</code></pre></blockquote>
+</li>
+<li><p><code>element.removeAttribute()</code>  从指定的元素中删除一个属性。</p>
+</li>
+<li><code>Element.removeAttributeNode()</code> removeAttributeNode 从当前的 element(元素节点) 删除指定的属性</li>
+<li><code>Element.setAttribute()</code> 设置指定元素上的一个属性值。如果属性已经存在，则更新该值; 否则将添加一个新的属性用指定的名称和值.要获取属性的当前值，使用 getAttribute(); 要删除一个属性，调用removeAttribute()。<blockquote>
+<p>element.setAttribute(name, value);</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="简单的看一下HTMLElement"><a href="#简单的看一下HTMLElement" class="headerlink" title="简单的看一下HTMLElement"></a>简单的看一下HTMLElement</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement</a></p>
+<ol>
+<li><code>HTMLElement.offsetHeight</code> 返回该元素的像素高度，高度包含该元素的垂直内边距和边框，且是一个整数。</li>
+<li><code>HTMLElement.offsetWidth</code> 返回一个元素的布局宽度。一个典型的offsetWidth是测量包含元素的边框(border)、水平线上的内边距(padding)、竖直方向滚动条(scrollbar)（如果存在的话）、以及CSS设置的宽度(width)的值。<br> <img src="https://developer.mozilla.org/@api/deki/files/186/=Dimensions-offset.png" alt="offset"><br> <img src="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png" alt="client"><br> <img src="https://developer.mozilla.org/@api/deki/files/840/=ScrollHeight.png" alt="scroll"></li>
+<li><code>HTMLElement.offsetParent</code> 元素的父元素，如果没有就是body元素</li>
+<li><code>HTMLElement.offsetLeft</code> 返回当前元素左上角相对于<code>HTMLElement.offsetParent</code>节点的左边界偏移的像素值</li>
+<li><code>HTMLElement.offsetTop</code> <code>HTMLElement.offsetTop</code>为只读属性，它返回当前元素相对于其<code>offsetParent</code>元素的顶部的距离。</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/24/JavaScript函数学习-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1195,425 +1690,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/HTML学习小简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bass小森的博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bass小森的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/07/HTML学习小简介/" itemprop="url">HTML学习小简介</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T13:59:07+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="W3C是啥"><a href="#W3C是啥" class="headerlink" title="W3C是啥"></a>W3C是啥</h2><blockquote>
-<p>W3C是指万维网联盟（World Wide Web Consortium，W3C），又称W3C理事会，是万维网的主要国际标准组织<br>  W3C是由Tim Beners Lee（李爵士）于1994年离开CERN（欧洲核子研究中心）后成立的。</p>
-</blockquote>
-<h2 id="MDN是啥"><a href="#MDN是啥" class="headerlink" title="MDN是啥"></a>MDN是啥</h2><p>学前端你不知道MDN，那你完了，MDN是这个世界上除了<a href="https://www.w3.org" target="_blank" rel="noopener">w3.org</a>之外的最权威的前端技术文档，并且通俗易懂，学习前端开发，是不得不查MDN文档的，特别是涉及到Web API。</p>
-<blockquote>
-<p>MDN Web Docs（旧称Mozilla Developer Network、Mozilla Developer Center，简称MDN）是一个汇集众多Mozilla基金会产品和网络技术开发文档的免费网站，于2005年创立</p>
-</blockquote>
-<h2 id="HTML的所有列表标签有那些呢？"><a href="#HTML的所有列表标签有那些呢？" class="headerlink" title="HTML的所有列表标签有那些呢？"></a>HTML的所有列表标签有那些呢？</h2><p>HTML中提供的代码标签有有序列表，无序列表，描述列表，他们对应的代码形式分别如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">自定义列表</span><br><span class="line"></span><br><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;我是术语定义元素&lt;/dt&gt;</span><br><span class="line">    &lt;dd&gt;我是描述元素&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br><span class="line"></span><br><span class="line">有序列表</span><br><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;2&lt;/li&gt;    </span><br><span class="line">&lt;/ol&gt;</span><br><span class="line"></span><br><span class="line">无序列表</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;2&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="什么是空标签（空元素）？"><a href="#什么是空标签（空元素）？" class="headerlink" title="什么是空标签（空元素）？"></a>什么是空标签（空元素）？</h2><blockquote>
-<p>没有HTML内容的标签就是空标签，空标签只需要写一个开始标签,一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。</p>
-<p>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如，<code>&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;</code>的闭标签是无效的 HTML。</p>
-<p>以下元素是HTML中的空元素<br><code>&lt;area&gt;</code> <code>&lt;base&gt;</code> <code>&lt;br&gt;</code> <code>&lt;col&gt;</code> <code>&lt;colgroup&gt;</code> <code>&lt;command&gt;</code> <code>&lt;embed&gt;</code><br><code>&lt;hr&gt;</code> <code>&lt;img&gt;</code> <code>&lt;input&gt;</code> <code>&lt;keygen&gt;</code> <code>&lt;link&gt;</code> <code>&lt;meta&gt;</code> <code>&lt;param&gt;</code><br><code>&lt;source&gt;</code> <code>&lt;track&gt;</code> <code>&lt;wbr&gt;</code></p>
-</blockquote>
-<h2 id="可替换元素又是啥啥啥？"><a href="#可替换元素又是啥啥啥？" class="headerlink" title="可替换元素又是啥啥啥？"></a>可替换元素又是啥啥啥？</h2><blockquote>
-<p>CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于CSS的 外部对象。 典型的可替换元素有 <code>&lt;img&gt;</code>、 <code>&lt;object&gt;</code>、 <code>&lt;video&gt;</code> 和 表单元素，如<code>&lt;textarea&gt;</code>、 <code>&lt;input&gt;</code> 。 某些元素只在一些特殊情况下表现为可替换元素，例如 <code>&lt;audio&gt;</code> 和 <code>&lt;canvas&gt;</code> 。 通过 CSS content 属性来插入的对象 被称作 匿名可替换元素（anonymous replaced elements）。</p>
-<p>CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。</p>
-<p>需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线（baseline），会被像vertical-align之类的一些 CSS 属性用到。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/博客搭建相关/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bass小森的博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bass小森的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/博客搭建相关/" itemprop="url">博客搭建相关</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T16:46:46+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>首先，全局安装hexo-cli，在确认本机已经安装命令行工具与nodejs的条件下，执行</p>
-<pre><code>npm install -g hexo-cli
-</code></pre><p>然后执行 <code>hexo init blog</code></p>
-<p>再切换进blog目录 <code>cd blog</code></p>
-<p>执行 <code>npm install</code> 安装package.json里的依赖项</p>
-<p>至此，博客的搭建已经完成，可以开始写文章了</p>
-<p><code>hexo new 文章标题</code> 然后边可打开文章进行编辑，此时可以在命令行输入<br><code>hexo server</code> 进行本地的预览</p>
-<p>在github上新建一个仓库，仓库名为用户名加上.github.io，然后在博客目录下执行<br><code>npm install hexo-deployer-git --save</code>，然后执行<code>hexo deploy</code><br>便可将博客部署到github上</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bass小森的博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bass小森的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T02:11:05+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1663,7 +1744,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1685,7 +1766,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
