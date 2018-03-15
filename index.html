@@ -252,6 +252,310 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/jQueryApi学习记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/15/jQueryApi学习记录/" itemprop="url">jQueryApi学习记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T09:33:02+08:00">
+                2018-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="index"><a href="#index" class="headerlink" title=".index()"></a><code>.index()</code></h3><blockquote>
+<p>是一个方法有三种用法，1. .index() 2. .index(selector) 3. .index(element)<br>用于返回在同辈元素中的索引</p>
+</blockquote>
+<h3 id="eq"><a href="#eq" class="headerlink" title=".eq()"></a><code>.eq()</code></h3><blockquote>
+<p>可接收正整数或负整数做参数，用于匹配元素的集合为指定的索引的某一元素</p>
+</blockquote>
+<h3 id="each-function-index-element"><a href="#each-function-index-element" class="headerlink" title=".each(function(index,element))"></a><code>.each(function(index,element))</code></h3><blockquote>
+<p>遍历一个jQuery对象，为每个匹配的元素执行一个函数</p>
+</blockquote>
+<h3 id="find"><a href="#find" class="headerlink" title=".find()"></a><code>.find()</code></h3><blockquote>
+<p>返回匹配当前元素的后代元素的集合，不同于<code>.children()</code>只返回子元素</p>
+<ol>
+<li>.find(selector) 2. .find(jQuery Obj) 3. .find(element)</li>
+</ol>
+</blockquote>
+<h3 id="children"><a href="#children" class="headerlink" title=".children()"></a><code>.children()</code></h3><blockquote>
+<p><code>.children([selector])</code></p>
+</blockquote>
+<h3 id="hover"><a href="#hover" class="headerlink" title=".hover()"></a><code>.hover()</code></h3><blockquote>
+<p>绑定两个回调函数在该方法上，分别当指针进入和离开元素时执行<br>调用<code>$(selector).hover(handlerIn,handlerOut)</code>，<code>$(selector).mouseenter(handlerIn).mouseleave(handlerOut)</code>的简写</p>
+</blockquote>
+<h3 id="filter"><a href="#filter" class="headerlink" title=".filter()"></a><code>.filter()</code></h3><blockquote>
+<p>筛选元素集合中匹配表达式的元素，有时会传递回调作为参数测试哪些元素匹配</p>
+</blockquote>
+<h3 id="first-last"><a href="#first-last" class="headerlink" title=".first() .last()"></a><code>.first()</code> <code>.last()</code></h3><blockquote>
+<p>获取匹配元素集合中的第一个元素，最后一个元素</p>
+</blockquote>
+<h3 id="css"><a href="#css" class="headerlink" title=".css()"></a><code>.css()</code></h3><blockquote>
+<p>用于设置css属性，可接收一个哈希或者一对键值对</p>
+</blockquote>
+<h3 id="end"><a href="#end" class="headerlink" title=".end()"></a><code>.end()</code></h3><blockquote>
+<p>终止当前的链式操作，并返回匹配元素<strong>之前</strong>的状态，要记住是之前的状态</p>
+</blockquote>
+<h3 id="addClass-和-removeClass"><a href="#addClass-和-removeClass" class="headerlink" title=".addClass()和.removeClass()"></a><code>.addClass()</code>和<code>.removeClass()</code></h3><blockquote>
+<p>顾名思义</p>
+</blockquote>
+<h3 id="remove"><a href="#remove" class="headerlink" title=".remove()"></a><code>.remove()</code></h3><blockquote>
+<p>移除元素</p>
+</blockquote>
+<h3 id="empty"><a href="#empty" class="headerlink" title=".empty()"></a><code>.empty()</code></h3><blockquote>
+<p>将匹配元素的内容置空</p>
+</blockquote>
+<h3 id="append-与-prepend-before-after-insetBefore-insertAfter"><a href="#append-与-prepend-before-after-insetBefore-insertAfter" class="headerlink" title=".append()与.prepend(),.before(),.after(),.insetBefore(),.insertAfter()"></a><code>.append()</code>与<code>.prepend()</code>,<code>.before()</code>,<code>.after()</code>,<code>.insetBefore()</code>,<code>.insertAfter()</code></h3><blockquote>
+<p>追加节点</p>
+</blockquote>
+<h3 id="change"><a href="#change" class="headerlink" title=".change()"></a><code>.change()</code></h3><blockquote>
+<p>类似<code>onchange</code>事件</p>
+</blockquote>
+<p>###<code>.html()</code></p>
+<blockquote>
+<p>获取集合中的第一个匹配的元素的html内容或设置每一个匹配元素的html内容</p>
+</blockquote>
+<h3 id="text"><a href="#text" class="headerlink" title=".text()"></a><code>.text()</code></h3><blockquote>
+<p>得到匹配元素集合中每个元素合并的文本，或设置匹配元素中每个元素的文本内容为指定内容</p>
+</blockquote>
+<h3 id="offset"><a href="#offset" class="headerlink" title=".offset()"></a><code>.offset()</code></h3><blockquote>
+<p>在匹配的元素集合中，获取第一个元素的当前坐标。或设置元素集合中每一个元素的坐标。可用于暂停状态，hide()与show()</p>
+</blockquote>
+<h3 id="one"><a href="#one" class="headerlink" title=".one()"></a><code>.one()</code></h3><blockquote>
+<p>为元素的事件添加处理函数。处理函数在每个元素上每种事件类型执行的次数最多一次</p>
+</blockquote>
+<h3 id="siblings-selector"><a href="#siblings-selector" class="headerlink" title=".siblings([selector])"></a><code>.siblings([selector])</code></h3><blockquote>
+<p>返回匹配元素集合中每个元素的兄弟元素，可提供一个可选的选择器</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/学习JavaScript数据结构与算法-树/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/14/学习JavaScript数据结构与算法-树/" itemprop="url">学习JavaScript数据结构与算法-树</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T00:55:38+08:00">
+                2018-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="以二叉查找树（BST）为例"><a href="#以二叉查找树（BST）为例" class="headerlink" title="以二叉查找树（BST）为例"></a>以二叉查找树（BST）为例</h2><p>二叉搜索树是二叉树的一种，但是它只允许你在左侧节点存储比父节点小的值，在右侧节点存储比父节点大于或等于的值。<br>这种性质可推导出：一颗二叉搜索树的最小值在最深层最左一个节点，最大值在最右一个节点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">BinarySearTree</span>(<span class="params"></span>)</span>&#123;<span class="comment">//会用到大量的递归</span></span><br><span class="line">    <span class="keyword">let</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.key = key</span><br><span class="line">        <span class="keyword">this</span>.left = <span class="literal">null</span></span><br><span class="line">        <span class="keyword">this</span>.right = <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> root = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">this</span>.insert = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;<span class="comment">//插入节点</span></span><br><span class="line">        <span class="keyword">let</span> newNode = <span class="keyword">new</span> Node(key)</span><br><span class="line">        <span class="keyword">if</span>(root === <span class="literal">null</span>)&#123;</span><br><span class="line">            root = newNode</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            insertNode(root,newNode)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> insertNode = <span class="function"><span class="keyword">function</span>(<span class="params">node,newNode</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(newNode.key &lt; node.key)&#123;</span><br><span class="line">            <span class="keyword">if</span>(node.left === <span class="literal">null</span>)&#123;</span><br><span class="line">                node.left = newNode</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                insertNode(node.left,node)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(newNode.key &gt; noew.key)&#123;</span><br><span class="line">                <span class="keyword">if</span>(node.right === <span class="literal">null</span>)&#123;</span><br><span class="line">                    node.right = newNode</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    insertNode(node.right,node)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.getRoot = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> root</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.search = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;<span class="comment">//搜索特定值</span></span><br><span class="line">        <span class="keyword">return</span> searchNode(root,key)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> searchNode = <span class="function"><span class="keyword">function</span>(<span class="params">node,key</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(key &lt; node.key)&#123;</span><br><span class="line">            <span class="keyword">return</span> searchNode(node.left,key)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(key &gt; node.key)&#123;</span><br><span class="line">            <span class="keyword">return</span> searchNode(node.right,key)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.inOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;<span class="comment">//中序遍历</span></span><br><span class="line">        inOrderTraverseNode(root,callback)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> inOrderTraverseNode = <span class="function"><span class="keyword">function</span>(<span class="params">node,callback</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node !== <span class="literal">null</span>)&#123;</span><br><span class="line">            inOrderTraverseNode(node.left,callback)</span><br><span class="line">            callback(node.key)</span><br><span class="line">            inOrderTraverseNode(node.right,callback)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.preOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;<span class="comment">//先序遍历</span></span><br><span class="line">        preOrderTraverseNode(root, callback)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> preOrderTraverseNode = <span class="function"><span class="keyword">function</span> (<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">            callback(node.key)</span><br><span class="line">            preOrderTraverseNode(node.left, callback)</span><br><span class="line">            preOrderTraverseNode(node.right, callback)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.postOrderTraverse = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;<span class="comment">//后序遍历</span></span><br><span class="line">        postOrderTraverseNode(root, callback)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> postOrderTraverseNode = <span class="function"><span class="keyword">function</span> (<span class="params">node, callback</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node !== <span class="literal">null</span>) &#123;</span><br><span class="line">            postOrderTraverseNode(node.left, callback)</span><br><span class="line">            postOrderTraverseNode(node.right, callback)</span><br><span class="line">            callback(node.key)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.min = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> minNode(root)&#125;</span><br><span class="line">    <span class="keyword">let</span> minNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node !== <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span>(node &amp;&amp; node.left!==<span class="literal">null</span>)&#123;</span><br><span class="line">                node = node.left</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> node.key</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.max = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> minNode(root)&#125;</span><br><span class="line">    <span class="keyword">let</span> maxNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node !== <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span>(node &amp;&amp; node.right!==<span class="literal">null</span>)&#123;</span><br><span class="line">                node = node.right</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> node.key</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">this</span>.remove = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">        root = removeNode(root,key)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> findMinNode = <span class="function"><span class="keyword">function</span>(<span class="params">node</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(node &amp;&amp; node.left!==<span class="literal">null</span>)&#123;</span><br><span class="line">            node = node.left</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> removeNode = <span class="function"><span class="keyword">function</span>(<span class="params">node, element</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (node === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (element &lt; node.key)&#123;</span><br><span class="line">            node.left = removeNode(node.left, element);</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element &gt; node.key)&#123;</span><br><span class="line">            node.right = removeNode(node.right, element);</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">//element is equal to node.item</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//handle 3 special conditions</span></span><br><span class="line">            <span class="comment">//1 - a leaf node</span></span><br><span class="line">            <span class="comment">//2 - a node with only 1 child</span></span><br><span class="line">            <span class="comment">//3 - a node with 2 children</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//case 1</span></span><br><span class="line">            <span class="keyword">if</span> (node.left === <span class="literal">null</span> &amp;&amp; node.right === <span class="literal">null</span>)&#123;</span><br><span class="line">                node = <span class="literal">null</span>;</span><br><span class="line">                <span class="keyword">return</span> node;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//case 2</span></span><br><span class="line">            <span class="keyword">if</span> (node.left === <span class="literal">null</span>)&#123;</span><br><span class="line">                node = node.right;</span><br><span class="line">                <span class="keyword">return</span> node;</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (node.right === <span class="literal">null</span>)&#123;</span><br><span class="line">                node = node.left;</span><br><span class="line">                <span class="keyword">return</span> node;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//case 3</span></span><br><span class="line">            <span class="keyword">var</span> aux = findMinNode(node.right);</span><br><span class="line">            node.key = aux.key;</span><br><span class="line">            node.right = removeNode(node.right, aux.key);</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/学习JavaScript数据结构与算法-字典和散列表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1228,265 +1532,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/学习JSONP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bass小森的博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bass小森的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/06/学习JSONP/" itemprop="url">学习JSONP</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T20:19:03+08:00">
-                2018-03-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="JSONP是什么？"><a href="#JSONP是什么？" class="headerlink" title="JSONP是什么？"></a>JSONP是什么？</h3><ol>
-<li>请求方动态创建一个<code>&lt;script&gt;</code>标签，<code>src</code>属性指向响应方，同时传一个查询参数如<code>?callbackName=xxx</code></li>
-<li>响应方根据查询参数callbackName，构造形如<ol>
-<li>xxx.call(undefined,’需要的数据’)</li>
-<li>xxx.call(‘需要的数据’)</li>
-</ol>
-</li>
-<li>浏览器方接收到响应，就会执行<code>xxx.call(undefined,&#39;你要的数据 &#39;)</code></li>
-<li>那么请求方就知道了他要的数据</li>
-</ol>
-<p>这就是JSONP</p>
-<h3 id="行业的约定："><a href="#行业的约定：" class="headerlink" title="行业的约定："></a>行业的约定：</h3><ol>
-<li>callbackName -&gt; callback</li>
-<li>xxx -&gt; 随机数 xxx随机数</li>
-</ol>
-<p>即回调函数的查询参数名称是<code>callback</code>，调用的函数名是结合随机数动态生成创建后调用再删除的，jQuery的jsonp方法便是采用这样的约定实现的</p>
-<h3 id="JSONP-为什么不支持-POST"><a href="#JSONP-为什么不支持-POST" class="headerlink" title="JSONP 为什么不支持 POST"></a>JSONP 为什么不支持 POST</h3><ol>
-<li>因为jsonp是通过动态创建script标签实现的</li>
-<li>动态创建script的时候只能使用get，无法使用post</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/搞个无缝轮播/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Bass小森的博客">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bass小森的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/04/搞个无缝轮播/" itemprop="url">搞个无缝轮播</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T18:56:02+08:00">
-                2018-03-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>还是用jQuery做一个无缝轮播，但还是没用上面向对象的知识，先从普通的功能性代码写起，等我真真实实的弄懂前端面向对象的使用，再来重新编写，这里还是想吐槽下无缝轮播这玩意，自己写的话坑点还是蛮多的，还是有个bug，快速点击上下张按钮切换就会出现类似乱序的现象，原因是我这里使用的是偷梁换柱的方式<br>预览地址：<a href="https://ba5sx1a0sen1.github.io/seamless-slide-2/index.html" target="_blank" rel="noopener">https://ba5sx1a0sen1.github.io/seamless-slide-2/index.html</a><br>代码地址：<a href="https://github.com/Ba5sx1a0sen1/seamless-slide-2" target="_blank" rel="noopener">https://github.com/Ba5sx1a0sen1/seamless-slide-2</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1541,7 +1586,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

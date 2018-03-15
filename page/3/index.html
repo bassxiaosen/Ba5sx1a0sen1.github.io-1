@@ -252,6 +252,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/HTML疑难标签-2-form与table/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/08/HTML疑难标签-2-form与table/" itemprop="url">HTML疑难标签(2)-form与table</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T01:11:45+08:00">
+                2018-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><p>可以这么说，<code>a</code>标签发起的请求是get请求，由<code>form</code>发起的请求是post请求，<code>method</code>一般为post，不会无聊到使用<code>get</code>，而<code>action</code>也仅仅只是路径而已，路径而已，路径而已。</p>
+<p>当<code>form</code>里有数据填充并发送时，浏览器会以http格式<code>content-type:x-www-form-urlencoded</code>拼凑数据并加到http请求的第四部分。</p>
+<p>如果没有提交按钮，你是无法提交你的表单的，所以一定要有提交按钮，除非你使用js进行提交，如果是<code>GET</code>请求，不会把数据参数填充到第四部分，而是带到查询参数上，这就很不好，<code>POST</code>默认没有查询参数，但是可以预先在<code>action</code>写好。</p>
+<p>巨坑：如果<code>form</code>里面没有提交按钮如<code>&lt;input type=&quot;submit&quot;&gt;</code>，则其中的一个<code>&lt;button&gt;submit&lt;/button&gt;</code>，自动升级为提交按钮。</p>
+<p><code>&lt;label for=&quot;xxx&quot;&gt;用户名&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;xxx&quot;&gt;</code><br>老司机写法：<code>&lt;label&gt;用户名&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;/label&gt;</code></p>
+<p>默认<code>checkbox</code>选中提交的值是<code>on</code>,可以在<code>value</code>属性自定义值。<code>radio</code>类似。</p>
+<p><code>select</code>：<code>name</code>,<code>disabled</code>,<code>selected</code>,<code>multiple</code></p>
+<p><code>textarea</code>:<code>name</code>,<code>resize:none</code>,<code>col=&quot;30&quot;</code>,<code>row=&quot;10&quot;</code></p>
+<h2 id="table"><a href="#table" class="headerlink" title="table"></a>table</h2><p>在HTML中规定，<code>&lt;table&gt;</code>标签里只能有三个子标签分别是：<code>&lt;thead&gt;</code>,<code>&lt;tbody&gt;</code>,<code>&lt;tfoot&gt;</code>。<br>三个子标签的顺序任意摆放浏览器会自动纠正<br>在以上三个子标签中，都可以写<code>&lt;tr&gt;</code>用来开一行,在<code>&lt;tr&gt;</code>中可以开多个<code>&lt;td&gt;</code>填充数据。<br>一般在<code>thead</code>中使用<code>&lt;th&gt;</code>表示表头</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">width</span>=<span class="string">100</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">bgcolor</span>=<span class="string">red</span> <span class="attr">width</span>=<span class="string">200</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">width</span>=<span class="string">300</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>border=1</code>:展示表格边框，如果需要将边框合并则在样式中编写<code>border-collapse:collapse;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/HTML疑难标签-1-iframe与a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bass小森的博客">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bass小森的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/08/HTML疑难标签-1-iframe与a/" itemprop="url">HTML疑难标签(1)-iframe与a</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T00:23:44+08:00">
+                2018-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>iframe的默认宽度为100，高度为50，有如下属性比较常见</p>
+<ol>
+<li><code>frameborder</code>，取1时为iframe绘制边框，取0时不绘制</li>
+<li><code>src</code>，嵌套页面的URL地址，设为“#”时则不嵌入，但占位</li>
+<li><code>name</code>，通常与<code>&lt;a&gt;</code>标签结合使用，用来与<code>&lt;a&gt;</code>标签的<code>target</code>属性配合使用，当<code>target</code>的值与<code>name</code>相等，则点击<code>&lt;a&gt;</code>标签时，以<code>iframe</code>为内嵌窗口打开页面</li>
+</ol>
+<p>如上，iframe目前在前端现代项目已经越来越少使用，除非是历史遗留项目否则确实很少使用到，记住这些一般够用，有奇葩需求可以查阅mdn文档。</p>
+<h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><p>a标签，你可能会说有什么好讲的呢？平时不就用来超链接，装饰链接改造成按钮吗？<br>接下来就会跟你一个一个解释，肯定会有没见过的细节。</p>
+<ol>
+<li><p><code>target</code>属性取值有四个：<code>_blank</code>，<code>_top</code>，<code>_parent</code>，<code>_self</code>。</p>
+<ul>
+<li><p><code>_blank</code>：这个属性见得多，即新窗口打开页面。</p>
+</li>
+<li><p><code>_top</code>：IHTML4中：加载的响应成完整的，原来的窗口，取消所有其它frame。 HTML5中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有parent）。如果没有parent框架或者浏览上下文，此选项的行为方式相同_self</p>
+</li>
+<li><p><code>_parent</code>：加载响应到当前框架的HTML4父框架或当前的HTML5浏览上下文的父浏览上下文。如果没有parent框架或者浏览上下文，此选项的行为方式相同_self。</p>
+</li>
+<li><p><code>_self</code>：当前页面加载，即当前的响应到同一HTML 4 frame（或HTML5浏览上下文）。此值是默认的，如果没有指定属性的话。</p>
+</li>
+</ul>
+</li>
+<li><p><code>download</code>属性见过吗？使用该属性我们便能强制下载，但是不使用该属性时，访问某些链接为什么也会下载呢？<br>如果一个HTTP响应的<code>Content-Type:application/ocet-stream</code>，<code>a</code>标签访问链接时，便自动下载，否则<br>只能使用download</p>
+</li>
+<li><p><code>href</code>属性，用的最多的属性这个不用说，但是这些细节肯定有你不知道的。</p>
+<ul>
+<li>如<code>&lt;a href=&quot;qq.com&quot;&gt;QQ&lt;/a&gt;</code>，你觉得会跳转到qq.com吗？肯定是不会，<code>a</code>标签把他当成文件了，所以必须带上协议，不带协议<code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>其实默认使用了file协议，但是写代码时严禁使用file协议，如果你使用了http-server，便是http协议，所以不带上协议是根据当前文件是什么协议就加上什么协议。</li>
+<li><code>href=&quot;?name=xxx&quot;</code>，这是什么意思哦？，我怎么没看过，点了这样的一个连接，浏览器会发起一个GET请求，作为查询参数</li>
+<li><code>href=&quot;javascript:alert(1)&quot;</code>，伪协议，历史遗留的问题，可用于实现奇葩需求，比如写一个<code>a</code>标签，但不让他干什么事，有人可能会问，为什么不使用#呢？使用#会导致你点击后滚回页面顶部。那不写<code>href</code>属性呢？不写的话，<code>a</code>标签就变成了<code>span</code>标签了，所以<code>href</code>是必要的属性.那如果写成<code>href=&quot;&quot;</code>空呢？那么遗憾的告诉你这种方法不可行，这样会刷新页面，发起了GET请求，跳转到自身，所以伪协议是必要的。</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/HTML学习小简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -707,7 +1009,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
