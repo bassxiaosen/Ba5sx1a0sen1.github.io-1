@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="jQuery," />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content=".index() 是一个方法有三种用法，1. .index() 2. .index(selector) 3. .index(element)用于返回在同辈元素中的索引  .eq() 可接收正整数或负整数做参数，用于匹配元素的集合为指定的索引的某一元素  .each(function(index,element)) 遍历一个jQuery对象，为每个匹配的元素执行一个函数  .find() 返回匹配当">
-<meta name="keywords" content="jQuery">
+<meta name="description" content="Cookie 服务器通过 Set-Cookie 头给客户端一串字符串 客户端每次访问相同域名的网页时，必须带上这段字符串 客户端要在一段时间内保存这个Cookie 容量大概只有4k Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间  Sessionsession是依赖于cookie的  将 SessionId（随机数） 通过 Cookie 发给客户端 客户端">
+<meta name="keywords" content="HTTP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQueryApi学习记录">
-<meta property="og:url" content="http://yoursite.com/2018/03/15/jQueryApi学习记录/index.html">
+<meta property="og:title" content="Cookie-Session-LocalStorage">
+<meta property="og:url" content="http://yoursite.com/2018/03/15/Cookie-Session-Storage/index.html">
 <meta property="og:site_name" content="Bass小森的博客">
-<meta property="og:description" content=".index() 是一个方法有三种用法，1. .index() 2. .index(selector) 3. .index(element)用于返回在同辈元素中的索引  .eq() 可接收正整数或负整数做参数，用于匹配元素的集合为指定的索引的某一元素  .each(function(index,element)) 遍历一个jQuery对象，为每个匹配的元素执行一个函数  .find() 返回匹配当">
+<meta property="og:description" content="Cookie 服务器通过 Set-Cookie 头给客户端一串字符串 客户端每次访问相同域名的网页时，必须带上这段字符串 客户端要在一段时间内保存这个Cookie 容量大概只有4k Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间  Sessionsession是依赖于cookie的  将 SessionId（随机数） 通过 Cookie 发给客户端 客户端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T04:42:54.000Z">
+<meta property="og:updated_time" content="2018-03-15T14:58:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQueryApi学习记录">
-<meta name="twitter:description" content=".index() 是一个方法有三种用法，1. .index() 2. .index(selector) 3. .index(element)用于返回在同辈元素中的索引  .eq() 可接收正整数或负整数做参数，用于匹配元素的集合为指定的索引的某一元素  .each(function(index,element)) 遍历一个jQuery对象，为每个匹配的元素执行一个函数  .find() 返回匹配当">
+<meta name="twitter:title" content="Cookie-Session-LocalStorage">
+<meta name="twitter:description" content="Cookie 服务器通过 Set-Cookie 头给客户端一串字符串 客户端每次访问相同域名的网页时，必须带上这段字符串 客户端要在一段时间内保存这个Cookie 容量大概只有4k Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间  Sessionsession是依赖于cookie的  将 SessionId（随机数） 通过 Cookie 发给客户端 客户端">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/15/jQueryApi学习记录/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/15/Cookie-Session-Storage/"/>
 
 
 
 
 
-  <title>jQueryApi学习记录 | Bass小森的博客</title>
+  <title>Cookie-Session-LocalStorage | Bass小森的博客</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/jQueryApi学习记录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/Cookie-Session-Storage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bass小森的博客">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jQueryApi学习记录</h1>
+          <h1 class="post-title" itemprop="name headline">Cookie-Session-LocalStorage</h1>
         
 
         <div class="post-meta">
@@ -282,7 +282,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T09:33:02+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T20:17:35+08:00">
                 2018-03-15
               </time>
             
@@ -320,70 +320,37 @@
       
 
       
-        <h3 id="index"><a href="#index" class="headerlink" title=".index()"></a><code>.index()</code></h3><blockquote>
-<p>是一个方法有三种用法，1. .index() 2. .index(selector) 3. .index(element)<br>用于返回在同辈元素中的索引</p>
-</blockquote>
-<h3 id="eq"><a href="#eq" class="headerlink" title=".eq()"></a><code>.eq()</code></h3><blockquote>
-<p>可接收正整数或负整数做参数，用于匹配元素的集合为指定的索引的某一元素</p>
-</blockquote>
-<h3 id="each-function-index-element"><a href="#each-function-index-element" class="headerlink" title=".each(function(index,element))"></a><code>.each(function(index,element))</code></h3><blockquote>
-<p>遍历一个jQuery对象，为每个匹配的元素执行一个函数</p>
-</blockquote>
-<h3 id="find"><a href="#find" class="headerlink" title=".find()"></a><code>.find()</code></h3><blockquote>
-<p>返回匹配当前元素的后代元素的集合，不同于<code>.children()</code>只返回子元素</p>
-<ol>
-<li>.find(selector) 2. .find(jQuery Obj) 3. .find(element)</li>
+        <h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><ol>
+<li>服务器通过 Set-Cookie 头给客户端一串字符串</li>
+<li>客户端每次访问相同域名的网页时，必须带上这段字符串</li>
+<li>客户端要在一段时间内保存这个Cookie</li>
+<li>容量大概只有4k</li>
+<li>Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间</li>
 </ol>
-</blockquote>
-<h3 id="children"><a href="#children" class="headerlink" title=".children()"></a><code>.children()</code></h3><blockquote>
-<p><code>.children([selector])</code></p>
-</blockquote>
-<h3 id="hover"><a href="#hover" class="headerlink" title=".hover()"></a><code>.hover()</code></h3><blockquote>
-<p>绑定两个回调函数在该方法上，分别当指针进入和离开元素时执行<br>调用<code>$(selector).hover(handlerIn,handlerOut)</code>，<code>$(selector).mouseenter(handlerIn).mouseleave(handlerOut)</code>的简写</p>
-</blockquote>
-<h3 id="filter"><a href="#filter" class="headerlink" title=".filter()"></a><code>.filter()</code></h3><blockquote>
-<p>筛选元素集合中匹配表达式的元素，有时会传递回调作为参数测试哪些元素匹配</p>
-</blockquote>
-<h3 id="first-last"><a href="#first-last" class="headerlink" title=".first() .last()"></a><code>.first()</code> <code>.last()</code></h3><blockquote>
-<p>获取匹配元素集合中的第一个元素，最后一个元素</p>
-</blockquote>
-<h3 id="css"><a href="#css" class="headerlink" title=".css()"></a><code>.css()</code></h3><blockquote>
-<p>用于设置css属性，可接收一个哈希或者一对键值对</p>
-</blockquote>
-<h3 id="end"><a href="#end" class="headerlink" title=".end()"></a><code>.end()</code></h3><blockquote>
-<p>终止当前的链式操作，并返回匹配元素<strong>之前</strong>的状态，要记住是之前的状态</p>
-</blockquote>
-<h3 id="addClass-和-removeClass"><a href="#addClass-和-removeClass" class="headerlink" title=".addClass()和.removeClass()"></a><code>.addClass()</code>和<code>.removeClass()</code></h3><blockquote>
-<p>顾名思义</p>
-</blockquote>
-<h3 id="remove"><a href="#remove" class="headerlink" title=".remove()"></a><code>.remove()</code></h3><blockquote>
-<p>移除元素</p>
-</blockquote>
-<h3 id="empty"><a href="#empty" class="headerlink" title=".empty()"></a><code>.empty()</code></h3><blockquote>
-<p>将匹配元素的内容置空</p>
-</blockquote>
-<h3 id="append-与-prepend-before-after-insetBefore-insertAfter"><a href="#append-与-prepend-before-after-insetBefore-insertAfter" class="headerlink" title=".append()与.prepend(),.before(),.after(),.insetBefore(),.insertAfter()"></a><code>.append()</code>与<code>.prepend()</code>,<code>.before()</code>,<code>.after()</code>,<code>.insetBefore()</code>,<code>.insertAfter()</code></h3><blockquote>
-<p>追加节点</p>
-</blockquote>
-<h3 id="change"><a href="#change" class="headerlink" title=".change()"></a><code>.change()</code></h3><blockquote>
-<p>类似<code>onchange</code>事件</p>
-</blockquote>
-<p>###<code>.html()</code></p>
-<blockquote>
-<p>获取集合中的第一个匹配的元素的html内容或设置每一个匹配元素的html内容</p>
-</blockquote>
-<h3 id="text"><a href="#text" class="headerlink" title=".text()"></a><code>.text()</code></h3><blockquote>
-<p>得到匹配元素集合中每个元素合并的文本，或设置匹配元素中每个元素的文本内容为指定内容</p>
-</blockquote>
-<h3 id="offset"><a href="#offset" class="headerlink" title=".offset()"></a><code>.offset()</code></h3><blockquote>
-<p>在匹配的元素集合中，获取第一个元素的当前坐标。或设置元素集合中每一个元素的坐标。可用于暂停状态，hide()与show()</p>
-</blockquote>
-<h3 id="one"><a href="#one" class="headerlink" title=".one()"></a><code>.one()</code></h3><blockquote>
-<p>为元素的事件添加处理函数。处理函数在每个元素上每种事件类型执行的次数最多一次</p>
-</blockquote>
-<h3 id="siblings-selector"><a href="#siblings-selector" class="headerlink" title=".siblings([selector])"></a><code>.siblings([selector])</code></h3><blockquote>
-<p>返回匹配元素集合中每个元素的兄弟元素，可提供一个可选的选择器</p>
-</blockquote>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><p>session是依赖于cookie的</p>
+<ol>
+<li>将 SessionId（随机数） 通过 Cookie 发给客户端</li>
+<li>客户端访问服务器时，服务器读取 SessionID</li>
+<li>服务器有一块内存（哈希表）保存了所有的 session</li>
+<li>通过 SessionID 我们可以得到对应用户的隐私信息，如 id、email</li>
+<li>这块内存（哈希表）就是服务器上的所有 session</li>
+</ol>
+<h3 id="LocalStorage"><a href="#LocalStorage" class="headerlink" title="LocalStorage"></a>LocalStorage</h3><p>cookie会带上给服务器，localstorage不会带上给服务器<br><code>.setItem()</code> <code>.removeItem()</code> <code>.clear()</code> <code>.getItem()</code></p>
+<ol>
+<li>LocalStora 跟 HTTP 无关</li>
+<li>HTTP 不会带上 LocalStorage 的值</li>
+<li>只有相同域名的页面才能互相读取 LocalStorage</li>
+<li>每个域名的 localStorage 最大存储量为 5mb 左右（每个浏览器不一样）</li>
+<li>常用场景：记录有没有提示过用户（没有用的信息，不能记录密码）</li>
+<li>LocalStorage 永久有效，除非用户清理缓存</li>
+</ol>
+<h3 id="SessionStorage"><a href="#SessionStorage" class="headerlink" title="SessionStorage"></a>SessionStorage</h3><pre><code>1. 2. 3. 4.同上
+5. SessionStorage 在用户关闭页面（会话结束）后失效
+</code></pre><h3 id="什么是session（面试）"><a href="#什么是session（面试）" class="headerlink" title="什么是session（面试）"></a>什么是session（面试）</h3><ol>
+<li>服务器通过Cookie给用户一个SessionID</li>
+<li>然后SessionID对应服务器上的一小块内存</li>
+<li>每次用户访问服务器时，服务器通过SessionID读取对应的Session然后知道用户的隐私信息</li>
+</ol>
 
       
     </div>
@@ -401,7 +368,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
           
         </div>
       
@@ -414,8 +381,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/学习JavaScript数据结构与算法-树/" rel="next" title="学习JavaScript数据结构与算法-树">
-                <i class="fa fa-chevron-left"></i> 学习JavaScript数据结构与算法-树
+              <a href="/2018/03/15/jQueryApi学习记录/" rel="next" title="jQueryApi学习记录">
+                <i class="fa fa-chevron-left"></i> jQueryApi学习记录
               </a>
             
           </div>
@@ -424,8 +391,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/15/Cookie-Session-Storage/" rel="prev" title="Cookie-Session-LocalStorage">
-                Cookie-Session-LocalStorage <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/深拷贝一个对象/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -562,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#index"><span class="nav-number">1.</span> <span class="nav-text">.index()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eq"><span class="nav-number">2.</span> <span class="nav-text">.eq()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#each-function-index-element"><span class="nav-number">3.</span> <span class="nav-text">.each(function(index,element))</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">4.</span> <span class="nav-text">.find()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#children"><span class="nav-number">5.</span> <span class="nav-text">.children()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hover"><span class="nav-number">6.</span> <span class="nav-text">.hover()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">7.</span> <span class="nav-text">.filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#first-last"><span class="nav-number">8.</span> <span class="nav-text">.first() .last()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css"><span class="nav-number">9.</span> <span class="nav-text">.css()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#end"><span class="nav-number">10.</span> <span class="nav-text">.end()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#addClass-和-removeClass"><span class="nav-number">11.</span> <span class="nav-text">.addClass()和.removeClass()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove"><span class="nav-number">12.</span> <span class="nav-text">.remove()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#empty"><span class="nav-number">13.</span> <span class="nav-text">.empty()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#append-与-prepend-before-after-insetBefore-insertAfter"><span class="nav-number">14.</span> <span class="nav-text">.append()与.prepend(),.before(),.after(),.insetBefore(),.insertAfter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#change"><span class="nav-number">15.</span> <span class="nav-text">.change()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text"><span class="nav-number">16.</span> <span class="nav-text">.text()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#offset"><span class="nav-number">17.</span> <span class="nav-text">.offset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#one"><span class="nav-number">18.</span> <span class="nav-text">.one()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#siblings-selector"><span class="nav-number">19.</span> <span class="nav-text">.siblings([selector])</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie"><span class="nav-number">1.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">2.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LocalStorage"><span class="nav-number">3.</span> <span class="nav-text">LocalStorage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SessionStorage"><span class="nav-number">4.</span> <span class="nav-text">SessionStorage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是session（面试）"><span class="nav-number">5.</span> <span class="nav-text">什么是session（面试）</span></a></li></ol></div>
             
 
           </div>
